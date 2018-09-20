@@ -1,0 +1,3021 @@
+option randseed 1534152590276126;
+option randseed 1534152590276126;
+jobs, 40
+depots, 2
+techs, 20
+skill domains, 2
+skill levels, 2
+weeks, 2
+tech hours, 1600
+runs, 1000
+problem testing: var_leave, var_arrive, var_start, var_twotech,
+  var_night_away, var_hours_tech, var_tech_pair, var_late, objective,
+  c_tech_min, c_tech_max, c_tech_inout, c_return_home, c_arcs, c_twotech,
+  c_pair_balance, c_pair_sym, c_pair_ub, c_tw_arrive, c_tw_leave,
+  c_start_time, c_finish_time;
+Count	Result	Gurobi	CPLEX	Objective
+1
+in feasible loop
+1	limit	281.023277	0.0	limit	98.201071	0.0
+2
+in feasible loop
+2	limit	272.575563	0.0	limit	167.464541	0.0
+3
+in feasible loop
+3	infeas	8.269743	0.0	infeas	5.862108	0.0
+4
+in feasible loop
+4	infeas	6.380031	0.0	infeas	4.658291	0.0
+5
+in feasible loop
+5	infeas	6.661988	0.0	infeas	4.716283	0.0
+6
+in feasible loop
+6	infeas	6.470016	0.0	infeas	4.656293	0.0
+7
+in feasible loop
+7	limit	272.437583	0.0	limit	95.677454	0.0
+8
+in feasible loop
+8	infeas	5.677138	0.0	infeas	4.027387	0.0
+9
+in feasible loop
+9	infeas	7.223902	0.0	infeas	5.126220	0.0
+10
+in feasible loop
+10	infeas	7.529856	0.0	infeas	5.382181	0.0
+11
+in feasible loop
+11	infeas	5.295195	0.0	infeas	3.811421	0.0
+12
+in feasible loop
+12	infeas	7.573849	0.0	infeas	5.308193	0.0
+13
+in feasible loop
+13	infeas	5.246202	0.0	infeas	3.936402	0.0
+14
+in feasible loop
+14	infeas	7.024932	0.0	infeas	4.842263	0.0
+15
+in feasible loop
+15	infeas	5.388182	0.0	infeas	3.934402	0.0
+16
+in feasible loop
+16	infeas	7.230900	0.0	infeas	5.267200	0.0
+17
+in feasible loop
+17	infeas	6.317039	0.0	infeas	4.499316	0.0
+18
+in feasible loop
+18	infeas	7.165911	0.0	infeas	4.988242	0.0
+19
+in feasible loop
+19	infeas	7.505858	0.0	infeas	5.488166	0.0
+20
+in feasible loop
+20	infeas	5.847111	0.0	infeas	4.192363	0.0
+21
+in feasible loop
+21	infeas	5.504163	0.0	infeas	4.010390	0.0
+22
+in feasible loop
+22	infeas	5.609148	0.0	infeas	4.082379	0.0
+23
+in feasible loop
+23	infeas	8.749670	0.0	infeas	6.246050	0.0
+24
+in feasible loop
+24	infeas	6.207056	0.0	infeas	4.400332	0.0
+25
+in feasible loop
+25	infeas	6.613994	0.0	infeas	4.797271	0.0
+26
+in feasible loop
+26	infeas	5.424175	0.0	infeas	3.915405	0.0
+27
+in feasible loop
+27	infeas	7.245899	0.0	infeas	5.213207	0.0
+28
+in feasible loop
+28	infeas	6.272046	0.0	infeas	4.664291	0.0
+29
+in feasible loop
+29	infeas	6.412025	0.0	infeas	4.624298	0.0
+30
+in feasible loop
+30	infeas	7.130915	0.0	infeas	5.113223	0.0
+31
+in feasible loop
+31	infeas	7.530855	0.0	infeas	5.474168	0.0
+32
+in feasible loop
+32	infeas	7.631840	0.0	infeas	5.361185	0.0
+33
+in feasible loop
+33	infeas	7.567850	0.0	infeas	5.459170	0.0
+34
+in feasible loop
+34	infeas	7.957790	0.0	infeas	5.640143	0.0
+35
+in feasible loop
+35	infeas	5.914100	0.0	infeas	4.329343	0.0
+36
+in feasible loop
+36	infeas	6.911948	0.0	infeas	4.949248	0.0
+37
+in feasible loop
+37	infeas	7.230900	0.0	infeas	5.056232	0.0
+38
+in feasible loop
+38	infeas	6.924947	0.0	infeas	4.928251	0.0
+39
+in feasible loop
+39	infeas	7.289892	0.0	infeas	5.100225	0.0
+40
+in feasible loop
+40	infeas	6.588998	0.0	infeas	4.685287	0.0
+41
+in feasible loop
+41	infeas	7.362881	0.0	infeas	5.265199	0.0
+42
+in feasible loop
+42	infeas	7.417873	0.0	infeas	5.288196	0.0
+43
+in feasible loop
+43	infeas	5.815116	0.0	infeas	4.209360	0.0
+44
+in feasible loop
+44	infeas	6.633992	0.0	infeas	4.947248	0.0
+45
+in feasible loop
+45	infeas	7.429870	0.0	infeas	5.399179	0.0
+46
+in feasible loop
+46	infeas	6.212056	0.0	infeas	4.508315	0.0
+47
+in feasible loop
+47	infeas	8.015781	0.0	infeas	5.709132	0.0
+48
+in feasible loop
+48	infeas	5.771122	0.0	infeas	4.372336	0.0
+49
+in feasible loop
+49	limit	267.835283	0.0	limit	162.977223	0.0
+50
+in feasible loop
+50	infeas	7.052928	0.0	infeas	5.176213	0.0
+51
+in feasible loop
+51	infeas	6.584999	0.0	infeas	4.654293	0.0
+52
+in feasible loop
+52	infeas	6.273046	0.0	infeas	4.552308	0.0
+53
+in feasible loop
+53	infeas	8.490709	0.0	infeas	6.204057	0.0
+54
+in feasible loop
+54	infeas	6.056079	0.0	infeas	4.253353	0.0
+55
+in feasible loop
+55	infeas	5.917101	0.0	infeas	4.179365	0.0
+56
+in feasible loop
+56	infeas	7.280893	0.0	infeas	5.124221	0.0
+57
+in feasible loop
+57	infeas	7.888801	0.0	infeas	5.678137	0.0
+58
+in feasible loop
+58	infeas	7.374878	0.0	infeas	5.244203	0.0
+59
+in feasible loop
+59	infeas	7.546853	0.0	infeas	5.231205	0.0
+60
+in feasible loop
+60	infeas	7.071924	0.0	infeas	5.104225	0.0
+61
+in feasible loop
+61	infeas	6.287044	0.0	infeas	4.514313	0.0
+62
+in feasible loop
+62	infeas	7.172910	0.0	infeas	5.228205	0.0
+63
+in feasible loop
+63	infeas	6.173062	0.0	infeas	4.426327	0.0
+64
+in feasible loop
+64	limit	277.394830	0.0	limit	174.629452	0.0
+65
+in feasible loop
+65	infeas	6.261048	0.0	infeas	4.492317	0.0
+66
+in feasible loop
+66	infeas	6.136068	0.0	infeas	4.454322	0.0
+67
+in feasible loop
+67	infeas	5.711132	0.0	infeas	4.139371	0.0
+68
+in feasible loop
+68	infeas	7.091922	0.0	infeas	5.029234	0.0
+69
+in feasible loop
+69	infeas	5.950096	0.0	infeas	4.327342	0.0
+70
+in feasible loop
+70	infeas	6.962942	0.0	infeas	4.957246	0.0
+71
+in feasible loop
+71	infeas	6.187060	0.0	infeas	4.496316	0.0
+72
+in feasible loop
+72	infeas	7.013934	0.0	infeas	5.132220	0.0
+73
+in feasible loop
+73	infeas	7.139914	0.0	infeas	5.076229	0.0
+74
+in feasible loop
+74	infeas	5.887105	0.0	infeas	4.409329	0.0
+75
+in feasible loop
+75	infeas	6.827962	0.0	infeas	5.053232	0.0
+76
+in feasible loop
+76	infeas	7.958790	0.0	infeas	5.565154	0.0
+77
+in feasible loop
+77	infeas	7.195906	0.0	infeas	5.056232	0.0
+78
+in feasible loop
+78	infeas	7.233900	0.0	infeas	5.441173	0.0
+79
+in feasible loop
+79	infeas	6.651988	0.0	infeas	4.795272	0.0
+80
+in feasible loop
+80	infeas	8.245746	0.0	infeas	5.885105	0.0
+81
+in feasible loop
+81	infeas	7.179909	0.0	infeas	5.136219	0.0
+82
+in feasible loop
+82	infeas	6.338036	0.0	infeas	4.557308	0.0
+83
+in feasible loop
+83	infeas	7.542853	0.0	infeas	5.376182	0.0
+84
+in feasible loop
+84	infeas	6.570002	0.0	infeas	4.656292	0.0
+85
+in feasible loop
+85	infeas	6.753973	0.0	infeas	4.643294	0.0
+86
+in feasible loop
+86	infeas	5.668138	0.0	infeas	3.984395	0.0
+87
+in feasible loop
+87	infeas	7.117918	0.0	infeas	5.015237	0.0
+88
+in feasible loop
+88	infeas	5.467169	0.0	infeas	3.989394	0.0
+89
+in feasible loop
+89	infeas	8.127764	0.0	infeas	5.842112	0.0
+90
+in feasible loop
+90	infeas	6.105072	0.0	infeas	4.469321	0.0
+91
+in feasible loop
+91	infeas	6.732976	0.0	infeas	5.033235	0.0
+92
+in feasible loop
+92	infeas	7.304889	0.0	infeas	5.410177	0.0
+93
+in feasible loop
+93	infeas	7.006936	0.0	infeas	4.953246	0.0
+94
+in feasible loop
+94	infeas	7.604845	0.0	infeas	5.400178	0.0
+95
+in feasible loop
+95	infeas	6.156064	0.0	infeas	4.442325	0.0
+96
+in feasible loop
+96	infeas	6.969940	0.0	infeas	5.181213	0.0
+97
+in feasible loop
+97	infeas	9.229597	0.0	infeas	6.652988	0.0
+98
+in feasible loop
+98	infeas	6.115070	0.0	infeas	4.546309	0.0
+99
+in feasible loop
+99	infeas	7.150914	0.0	infeas	5.079228	0.0
+100
+in feasible loop
+100	infeas	7.414872	0.0	infeas	5.286196	0.0
+101
+in feasible loop
+101	infeas	5.884106	0.0	infeas	4.367336	0.0
+102
+in feasible loop
+102	infeas	8.338733	0.0	infeas	5.916100	0.0
+103
+in feasible loop
+103	infeas	7.528855	0.0	infeas	5.399179	0.0
+104
+in feasible loop
+104	infeas	7.116919	0.0	infeas	5.157215	0.0
+105
+in feasible loop
+105	infeas	7.502860	0.0	infeas	5.379182	0.0
+106
+in feasible loop
+106	infeas	6.719979	0.0	infeas	4.813268	0.0
+107
+in feasible loop
+107	infeas	6.570001	0.0	infeas	4.859261	0.0
+108
+in feasible loop
+108	infeas	5.981092	0.0	infeas	4.188363	0.0
+109
+in feasible loop
+109	infeas	6.623993	0.0	infeas	4.793271	0.0
+110
+in feasible loop
+110	infeas	8.126765	0.0	infeas	5.893103	0.0
+111
+in feasible loop
+111	infeas	6.305041	0.0	infeas	4.452324	0.0
+112
+in feasible loop
+112	infeas	7.196906	0.0	infeas	5.037234	0.0
+113
+in feasible loop
+113	infeas	6.944944	0.0	infeas	4.943249	0.0
+114
+in feasible loop
+114	infeas	4.842264	0.0	infeas	3.506467	0.0
+115
+in feasible loop
+115	infeas	6.237051	0.0	infeas	4.598301	0.0
+116
+in feasible loop
+116	infeas	6.356034	0.0	infeas	4.516313	0.0
+117
+in feasible loop
+117	infeas	7.118918	0.0	infeas	5.175213	0.0
+118
+in feasible loop
+118	infeas	8.115766	0.0	infeas	5.897105	0.0
+119
+in feasible loop
+119	infeas	7.546852	0.0	infeas	5.242203	0.0
+120
+in feasible loop
+120	infeas	7.342884	0.0	infeas	5.287196	0.0
+121
+in feasible loop
+121	infeas	5.892104	0.0	infeas	4.236356	0.0
+122
+in feasible loop
+122	infeas	7.904798	0.0	infeas	5.526161	0.0
+123
+in feasible loop
+123	infeas	7.133915	0.0	infeas	5.003239	0.0
+124
+in feasible loop
+124	limit	279.242549	0.0	limit	175.308349	0.0
+125
+in feasible loop
+125	infeas	6.980939	0.0	infeas	5.088226	0.0
+126
+in feasible loop
+126	infeas	7.323886	0.0	infeas	5.192211	0.0
+127
+in feasible loop
+127	infeas	6.408027	0.0	infeas	4.600300	0.0
+128
+in feasible loop
+128	infeas	6.571001	0.0	infeas	4.729281	0.0
+129
+in feasible loop
+129	infeas	7.718826	0.0	infeas	5.501165	0.0
+130
+in feasible loop
+130	infeas	7.413873	0.0	infeas	5.321190	0.0
+131
+in feasible loop
+131	infeas	6.336037	0.0	infeas	4.551308	0.0
+132
+in feasible loop
+132	infeas	7.730824	0.0	infeas	5.604149	0.0
+133
+in feasible loop
+133	infeas	7.604843	0.0	infeas	5.444173	0.0
+134
+in feasible loop
+134	infeas	6.567002	0.0	infeas	4.828266	0.0
+135
+in feasible loop
+135	infeas	8.083771	0.0	infeas	5.484166	0.0
+136
+in feasible loop
+136	infeas	7.910798	0.0	infeas	5.608147	0.0
+137
+in feasible loop
+137	infeas	7.665835	0.0	infeas	5.515161	0.0
+138
+in feasible loop
+138	infeas	5.935098	0.0	infeas	4.543309	0.0
+139
+in feasible loop
+139	infeas	6.233053	0.0	infeas	4.533310	0.0
+140
+in feasible loop
+140	infeas	6.304042	0.0	infeas	4.538310	0.0
+141
+in feasible loop
+141	infeas	7.191907	0.0	infeas	5.131220	0.0
+142
+in feasible loop
+142	infeas	5.392180	0.0	infeas	3.923404	0.0
+143
+in feasible loop
+143	infeas	7.633840	0.0	infeas	5.612146	0.0
+144
+in feasible loop
+144	infeas	7.755821	0.0	infeas	5.553156	0.0
+145
+in feasible loop
+145	infeas	6.973939	0.0	infeas	4.944249	0.0
+146
+in feasible loop
+146	infeas	9.342580	0.0	infeas	6.640990	0.0
+147
+in feasible loop
+147	infeas	8.665683	0.0	infeas	6.139066	0.0
+148
+in feasible loop
+148	limit	283.546894	0.0	limit	90.113301	0.0
+149
+in feasible loop
+149	limit	233.815455	0.0	limit	63.203392	0.0
+150
+in feasible loop
+150	infeas	7.043929	0.0	infeas	5.008238	0.0
+151
+in feasible loop
+151	infeas	7.395876	0.0	infeas	5.425175	0.0
+152
+in feasible loop
+152	infeas	7.635839	0.0	infeas	5.443173	0.0
+153
+in feasible loop
+153	infeas	6.740976	0.0	infeas	4.896254	0.0
+154
+in feasible loop
+154	limit	273.732387	0.0	limit	102.560409	0.0
+155
+in feasible loop
+155	infeas	7.357881	0.0	infeas	5.256201	0.0
+156
+in feasible loop
+156	infeas	6.993936	0.0	infeas	5.008240	0.0
+157
+in feasible loop
+157	infeas	6.238051	0.0	infeas	4.487318	0.0
+158
+in feasible loop
+158	infeas	4.748278	0.0	infeas	3.540462	0.0
+159
+in feasible loop
+159	infeas	7.114918	0.0	infeas	4.989242	0.0
+160
+in feasible loop
+160	infeas	7.235900	0.0	infeas	5.142218	0.0
+161
+in feasible loop
+161	infeas	5.997088	0.0	infeas	4.331342	0.0
+162
+in feasible loop
+162	infeas	5.260200	0.0	infeas	3.813421	0.0
+163
+in feasible loop
+163	infeas	7.089922	0.0	infeas	5.078227	0.0
+164
+in feasible loop
+164	infeas	6.068078	0.0	infeas	4.381334	0.0
+165
+in feasible loop
+165	infeas	6.239051	0.0	infeas	4.566306	0.0
+166
+in feasible loop
+166	infeas	5.648142	0.0	infeas	4.207360	0.0
+167
+in feasible loop
+167	infeas	6.104072	0.0	infeas	4.472320	0.0
+168
+in feasible loop
+168	infeas	7.742823	0.0	infeas	5.630144	0.0
+169
+in feasible loop
+169	infeas	6.859958	0.0	infeas	4.899254	0.0
+170
+in feasible loop
+170	infeas	8.542702	0.0	infeas	6.232052	0.0
+171
+in feasible loop
+171	infeas	7.154912	0.0	infeas	5.048233	0.0
+172
+in feasible loop
+172	infeas	6.437021	0.0	infeas	4.637296	0.0
+173
+in feasible loop
+173	infeas	8.559698	0.0	infeas	5.993089	0.0
+174
+in feasible loop
+174	infeas	5.900103	0.0	infeas	4.232357	0.0
+175
+in feasible loop
+175	infeas	6.376030	0.0	infeas	4.482319	0.0
+176
+in feasible loop
+176	infeas	6.509011	0.0	infeas	4.639295	0.0
+177
+in feasible loop
+177	infeas	5.764123	0.0	infeas	4.108376	0.0
+178
+in feasible loop
+178	infeas	5.515161	0.0	infeas	3.998393	0.0
+179
+in feasible loop
+179	infeas	7.321886	0.0	infeas	5.256201	0.0
+180
+in feasible loop
+180	infeas	8.260745	0.0	infeas	5.834112	0.0
+181
+in feasible loop
+181	infeas	7.120918	0.0	infeas	5.189211	0.0
+182
+in feasible loop
+182	infeas	7.226902	0.0	infeas	5.222206	0.0
+183
+in feasible loop
+183	infeas	6.269047	0.0	infeas	4.702285	0.0
+184
+in feasible loop
+184	infeas	7.299890	0.0	infeas	5.314192	0.0
+185
+in feasible loop
+185	infeas	5.398179	0.0	infeas	3.938402	0.0
+186
+in feasible loop
+186	infeas	6.486014	0.0	infeas	4.703284	0.0
+187
+in feasible loop
+187	infeas	5.579152	0.0	infeas	4.084379	0.0
+188
+in feasible loop
+188	infeas	6.843960	0.0	infeas	4.922252	0.0
+189
+in feasible loop
+189	infeas	6.705980	0.0	infeas	4.771275	0.0
+190
+in feasible loop
+190	infeas	7.561851	0.0	infeas	5.585150	0.0
+191
+in feasible loop
+191	infeas	7.024932	0.0	infeas	4.921252	0.0
+192
+in feasible loop
+192	infeas	6.548005	0.0	infeas	4.785272	0.0
+193
+in feasible loop
+193	infeas	7.220903	0.0	infeas	5.189210	0.0
+194
+in feasible loop
+194	infeas	8.014782	0.0	infeas	5.731129	0.0
+195
+in feasible loop
+195	infeas	7.606844	0.0	infeas	5.310192	0.0
+196
+in feasible loop
+196	infeas	7.051929	0.0	infeas	5.043232	0.0
+197
+in feasible loop
+197	infeas	7.748822	0.0	infeas	5.551157	0.0
+198
+in feasible loop
+198	infeas	6.471016	0.0	infeas	4.604300	0.0
+199
+in feasible loop
+199	infeas	6.574000	0.0	infeas	4.767276	0.0
+200
+in feasible loop
+200	infeas	7.020933	0.0	infeas	5.022236	0.0
+201
+in feasible loop
+201	infeas	6.348035	0.0	infeas	4.617298	0.0
+202
+in feasible loop
+202	infeas	7.404875	0.0	infeas	5.100224	0.0
+203
+in feasible loop
+203	infeas	8.247746	0.0	infeas	5.940097	0.0
+204
+in feasible loop
+204	infeas	6.443021	0.0	infeas	4.581303	0.0
+205
+in feasible loop
+205	infeas	6.918948	0.0	infeas	5.003240	0.0
+206
+in feasible loop
+206	infeas	6.330038	0.0	infeas	4.482318	0.0
+207
+in feasible loop
+207	infeas	6.898951	0.0	infeas	4.903254	0.0
+208
+in feasible loop
+208	infeas	5.288197	0.0	infeas	3.668442	0.0
+209
+in feasible loop
+209	infeas	7.336885	0.0	infeas	5.293195	0.0
+210
+in feasible loop
+210	infeas	8.281741	0.0	infeas	5.976091	0.0
+211
+in feasible loop
+211	infeas	7.840808	0.0	infeas	5.687136	0.0
+212
+in feasible loop
+212	infeas	6.674985	0.0	infeas	4.716283	0.0
+213
+in feasible loop
+213	infeas	7.215903	0.0	infeas	5.347187	0.0
+214
+in feasible loop
+214	infeas	7.986786	0.0	infeas	5.808117	0.0
+215
+in feasible loop
+215	infeas	6.897951	0.0	infeas	5.101225	0.0
+216
+in feasible loop
+216	infeas	7.336885	0.0	infeas	5.338188	0.0
+217
+in feasible loop
+217	infeas	7.193907	0.0	infeas	5.133219	0.0
+218
+in feasible loop
+218	infeas	7.173910	0.0	infeas	5.063230	0.0
+219
+in feasible loop
+219	infeas	6.336036	0.0	infeas	4.633296	0.0
+220
+in feasible loop
+220	infeas	7.593846	0.0	infeas	5.402178	0.0
+221
+in feasible loop
+221	infeas	8.577696	0.0	infeas	6.189060	0.0
+222
+in feasible loop
+222	infeas	5.380182	0.0	infeas	3.966397	0.0
+223
+in feasible loop
+223	infeas	8.580695	0.0	infeas	6.079076	0.0
+224
+in feasible loop
+224	infeas	8.162759	0.0	infeas	5.818116	0.0
+225
+in feasible loop
+225	infeas	8.296739	0.0	infeas	6.103072	0.0
+226
+in feasible loop
+226	infeas	6.071076	0.0	infeas	4.374336	0.0
+227
+in feasible loop
+227	infeas	8.012781	0.0	infeas	5.510162	0.0
+228
+in feasible loop
+228	infeas	7.063926	0.0	infeas	5.135221	0.0
+229
+in feasible loop
+229	infeas	9.042624	0.0	infeas	6.351035	0.0
+230
+in feasible loop
+230	infeas	6.325039	0.0	infeas	4.431326	0.0
+231
+in feasible loop
+231	infeas	7.196906	0.0	infeas	5.074228	0.0
+232
+in feasible loop
+232	infeas	5.277198	0.0	infeas	3.688439	0.0
+233
+in feasible loop
+233	infeas	7.068926	0.0	infeas	5.119221	0.0
+234
+in feasible loop
+234	infeas	6.606996	0.0	infeas	5.274198	0.0
+235
+in feasible loop
+235	infeas	7.914797	0.0	infeas	5.659140	0.0
+236
+in feasible loop
+236	limit	286.279479	0.0	limit	143.331210	0.0
+237
+in feasible loop
+237	infeas	8.007782	0.0	infeas	5.648142	0.0
+238
+in feasible loop
+238	infeas	7.498860	0.0	infeas	5.558155	0.0
+239
+in feasible loop
+239	infeas	6.367032	0.0	infeas	4.527312	0.0
+240
+in feasible loop
+240	infeas	8.701677	0.0	infeas	6.216055	0.0
+241
+in feasible loop
+241	infeas	5.877107	0.0	infeas	4.311344	0.0
+242
+in feasible loop
+242	infeas	7.732825	0.0	infeas	5.527159	0.0
+243
+in feasible loop
+243	infeas	7.225902	0.0	infeas	5.121221	0.0
+244
+in feasible loop
+244	infeas	6.132068	0.0	infeas	4.435326	0.0
+245
+in feasible loop
+245	infeas	8.587694	0.0	infeas	6.276046	0.0
+246
+in feasible loop
+246	infeas	6.840960	0.0	infeas	4.888257	0.0
+247
+in feasible loop
+247	infeas	7.175909	0.0	infeas	5.268199	0.0
+248
+in feasible loop
+248	infeas	8.555699	0.0	infeas	6.226054	0.0
+249
+in feasible loop
+249	infeas	7.001936	0.0	infeas	5.103224	0.0
+250
+in feasible loop
+250	infeas	6.716979	0.0	infeas	4.819267	0.0
+251
+in feasible loop
+251	infeas	7.417873	0.0	infeas	5.304192	0.0
+252
+in feasible loop
+252	infeas	6.773971	0.0	infeas	4.772275	0.0
+253
+in feasible loop
+253	infeas	7.084923	0.0	infeas	5.166214	0.0
+254
+in feasible loop
+254	infeas	7.096922	0.0	infeas	5.117222	0.0
+255
+in feasible loop
+255	infeas	7.619841	0.0	infeas	5.359185	0.0
+256
+in feasible loop
+256	infeas	7.498860	0.0	infeas	5.395180	0.0
+257
+in feasible loop
+257	infeas	7.824810	0.0	infeas	5.402179	0.0
+258
+in feasible loop
+258	infeas	8.515706	0.0	infeas	6.099072	0.0
+259
+in feasible loop
+259	infeas	7.004935	0.0	infeas	5.006240	0.0
+260
+in feasible loop
+260	infeas	6.714979	0.0	infeas	4.979243	0.0
+261
+in feasible loop
+261	infeas	6.755972	0.0	infeas	4.856262	0.0
+262
+in feasible loop
+262	infeas	7.604844	0.0	infeas	5.326191	0.0
+263
+in feasible loop
+263	infeas	5.830114	0.0	infeas	4.151368	0.0
+264
+in feasible loop
+264	infeas	5.349186	0.0	infeas	3.956399	0.0
+265
+in feasible loop
+265	infeas	6.497012	0.0	infeas	4.646294	0.0
+266
+in feasible loop
+266	infeas	8.388725	0.0	infeas	6.082076	0.0
+267
+in feasible loop
+267	infeas	6.845958	0.0	infeas	4.958247	0.0
+268
+in feasible loop
+268	infeas	6.768971	0.0	infeas	4.779274	0.0
+269
+in feasible loop
+269	infeas	6.882953	0.0	infeas	4.904255	0.0
+270
+in feasible loop
+270	infeas	7.042929	0.0	infeas	4.971244	0.0
+271
+in feasible loop
+271	infeas	6.885953	0.0	infeas	4.940249	0.0
+272
+in feasible loop
+272	infeas	7.827810	0.0	infeas	5.523161	0.0
+273
+in feasible loop
+273	infeas	7.666834	0.0	infeas	5.514161	0.0
+274
+in feasible loop
+274	infeas	8.337734	0.0	infeas	5.907101	0.0
+275
+in feasible loop
+275	infeas	6.165062	0.0	infeas	4.396333	0.0
+276
+in feasible loop
+276	infeas	6.593998	0.0	infeas	4.803269	0.0
+277
+in feasible loop
+277	infeas	6.033083	0.0	infeas	4.456322	0.0
+278
+in feasible loop
+278	infeas	5.430174	0.0	infeas	4.060384	0.0
+279
+in feasible loop
+279	infeas	6.754972	0.0	infeas	4.885258	0.0
+280
+in feasible loop
+280	infeas	7.081923	0.0	infeas	5.092226	0.0
+281
+in feasible loop
+281	limit	281.844154	0.0	limit	103.050333	0.0
+282
+in feasible loop
+282	infeas	6.488014	0.0	infeas	4.494317	0.0
+283
+in feasible loop
+283	infeas	6.023085	0.0	infeas	4.308345	0.0
+284
+in feasible loop
+284	infeas	6.769970	0.0	infeas	5.005239	0.0
+285
+in feasible loop
+285	infeas	4.987242	0.0	infeas	3.574457	0.0
+286
+in feasible loop
+286	infeas	6.482014	0.0	infeas	4.774274	0.0
+287
+in feasible loop
+287	infeas	7.381878	0.0	infeas	5.288196	0.0
+288
+in feasible loop
+288	infeas	7.331885	0.0	infeas	5.353187	0.0
+289
+in feasible loop
+289	infeas	6.206056	0.0	infeas	4.346340	0.0
+290
+in feasible loop
+290	infeas	7.361881	0.0	infeas	5.391179	0.0
+291
+in feasible loop
+291	infeas	7.716828	0.0	infeas	5.767122	0.0
+292
+in feasible loop
+292	infeas	5.554156	0.0	infeas	4.202361	0.0
+293
+in feasible loop
+293	limit	263.558933	0.0	limit	63.376366	0.0
+294
+in feasible loop
+294	infeas	7.916796	0.0	infeas	5.573153	0.0
+295
+in feasible loop
+295	infeas	6.775970	0.0	infeas	4.888257	0.0
+296
+in feasible loop
+296	infeas	7.151912	0.0	infeas	5.063231	0.0
+297
+in feasible loop
+297	infeas	6.184060	0.0	infeas	4.348339	0.0
+298
+in feasible loop
+298	infeas	7.291891	0.0	infeas	5.272199	0.0
+299
+in feasible loop
+299	infeas	6.831961	0.0	infeas	4.925251	0.0
+300
+in feasible loop
+300	limit	271.365746	0.0	limit	94.789591	0.0
+301
+in feasible loop
+301	infeas	7.342883	0.0	infeas	5.231205	0.0
+302
+in feasible loop
+302	infeas	7.973787	0.0	infeas	5.747127	0.0
+303
+in feasible loop
+303	infeas	5.952095	0.0	infeas	4.235357	0.0
+304
+in feasible loop
+304	infeas	6.571000	0.0	infeas	4.624297	0.0
+305
+in feasible loop
+305	infeas	7.343884	0.0	infeas	5.170214	0.0
+306
+in feasible loop
+306	infeas	5.887104	0.0	infeas	4.357338	0.0
+307
+in feasible loop
+307	infeas	6.850959	0.0	infeas	4.967245	0.0
+308
+in feasible loop
+308	infeas	7.295891	0.0	infeas	5.276198	0.0
+309
+in feasible loop
+309	infeas	7.940792	0.0	infeas	5.723131	0.0
+310
+in feasible loop
+310	infeas	7.110919	0.0	infeas	5.027235	0.0
+311
+in feasible loop
+311	infeas	7.476863	0.0	infeas	5.467170	0.0
+312
+in feasible loop
+312	infeas	6.629991	0.0	infeas	5.002240	0.0
+313
+in feasible loop
+313	infeas	5.719131	0.0	infeas	4.187362	0.0
+314
+in feasible loop
+314	infeas	6.443021	0.0	infeas	4.613299	0.0
+315
+in feasible loop
+315	infeas	7.381878	0.0	infeas	5.265199	0.0
+316
+in feasible loop
+316	infeas	6.415025	0.0	infeas	4.542310	0.0
+317
+in feasible loop
+317	infeas	8.201752	0.0	infeas	5.831114	0.0
+318
+in feasible loop
+318	infeas	6.816964	0.0	infeas	4.821267	0.0
+319
+in feasible loop
+319	infeas	7.689831	0.0	infeas	5.571153	0.0
+320
+in feasible loop
+320	infeas	8.071773	0.0	infeas	5.757125	0.0
+321
+in feasible loop
+321	infeas	7.761819	0.0	infeas	5.568154	0.0
+322
+in feasible loop
+322	infeas	7.865805	0.0	infeas	5.476167	0.0
+323
+in feasible loop
+323	infeas	5.240203	0.0	infeas	3.914405	0.0
+324
+in feasible loop
+324	infeas	7.520857	0.0	infeas	5.336189	0.0
+325
+in feasible loop
+325	infeas	6.035082	0.0	infeas	4.345339	0.0
+326
+in feasible loop
+326	infeas	5.616146	0.0	infeas	4.050385	0.0
+327
+in feasible loop
+327	infeas	6.097074	0.0	infeas	4.373334	0.0
+328
+in feasible loop
+328	infeas	8.110768	0.0	infeas	5.888104	0.0
+329
+in feasible loop
+329	infeas	7.349883	0.0	infeas	5.273198	0.0
+330
+in feasible loop
+330	infeas	6.552004	0.0	infeas	4.777274	0.0
+331
+in feasible loop
+331	infeas	9.036626	0.0	infeas	6.359034	0.0
+332
+in feasible loop
+332	infeas	6.173060	0.0	infeas	4.528313	0.0
+333
+in feasible loop
+333	infeas	5.524160	0.0	infeas	3.950399	0.0
+334
+in feasible loop
+334	infeas	6.708980	0.0	infeas	4.668291	0.0
+335
+in feasible loop
+335	infeas	6.412025	0.0	infeas	4.619297	0.0
+336
+in feasible loop
+336	infeas	6.400027	0.0	infeas	4.647294	0.0
+337
+in feasible loop
+337	limit	283.944834	0.0	limit	178.082928	0.0
+338
+in feasible loop
+338	infeas	6.606994	0.0	infeas	4.648294	0.0
+339
+in feasible loop
+339	infeas	8.138763	0.0	infeas	5.795119	0.0
+340
+in feasible loop
+340	infeas	6.916948	0.0	infeas	4.864261	0.0
+341
+in feasible loop
+341	infeas	6.399027	0.0	infeas	4.542309	0.0
+342
+in feasible loop
+342	infeas	5.193211	0.0	infeas	3.862413	0.0
+343
+in feasible loop
+343	infeas	8.131763	0.0	infeas	5.717132	0.0
+344
+in feasible loop
+344	infeas	7.369879	0.0	infeas	5.268199	0.0
+345
+in feasible loop
+345	infeas	8.161760	0.0	infeas	5.885104	0.0
+346
+in feasible loop
+346	infeas	7.145914	0.0	infeas	5.139219	0.0
+347
+in feasible loop
+347	infeas	6.129069	0.0	infeas	4.364336	0.0
+348
+in feasible loop
+348	infeas	7.147913	0.0	infeas	5.041233	0.0
+349
+in feasible loop
+349	infeas	6.338037	0.0	infeas	4.489318	0.0
+350
+in feasible loop
+350	infeas	7.620841	0.0	infeas	5.399179	0.0
+351
+in feasible loop
+351	infeas	5.559155	0.0	infeas	3.974396	0.0
+352
+in feasible loop
+352	infeas	6.003087	0.0	infeas	4.313345	0.0
+353
+in feasible loop
+353	infeas	5.186212	0.0	infeas	3.676440	0.0
+354
+in feasible loop
+354	infeas	5.354186	0.0	infeas	4.030388	0.0
+355
+in feasible loop
+355	infeas	7.084923	0.0	infeas	5.012238	0.0
+356
+in feasible loop
+356	infeas	6.250050	0.0	infeas	4.418328	0.0
+357
+in feasible loop
+357	limit	281.544199	0.0	limit	176.249206	0.0
+358
+in feasible loop
+358	infeas	8.845655	0.0	infeas	6.272046	0.0
+359
+in feasible loop
+359	infeas	5.724130	0.0	infeas	4.213360	0.0
+360
+in feasible loop
+360	infeas	6.041081	0.0	infeas	4.190363	0.0
+361
+in feasible loop
+361	infeas	6.008087	0.0	infeas	4.379334	0.0
+362
+in feasible loop
+362	infeas	7.846807	0.0	infeas	5.522160	0.0
+363
+in feasible loop
+363	infeas	5.372184	0.0	infeas	3.870412	0.0
+364
+in feasible loop
+364	infeas	6.285044	0.0	infeas	4.563306	0.0
+365
+in feasible loop
+365	infeas	5.434174	0.0	infeas	3.908407	0.0
+366
+in feasible loop
+366	infeas	7.059925	0.0	infeas	5.163216	0.0
+367
+in feasible loop
+367	infeas	7.501860	0.0	infeas	5.391180	0.0
+368
+in feasible loop
+368	infeas	7.142914	0.0	infeas	5.215207	0.0
+369
+in feasible loop
+369	infeas	7.126916	0.0	infeas	5.019238	0.0
+370
+in feasible loop
+370	infeas	8.300738	0.0	infeas	5.784120	0.0
+371
+in feasible loop
+371	infeas	6.733977	0.0	infeas	4.951247	0.0
+372
+in feasible loop
+372	infeas	5.440174	0.0	infeas	3.916404	0.0
+373
+in feasible loop
+373	infeas	6.876954	0.0	infeas	4.924252	0.0
+374
+in feasible loop
+374	infeas	6.025084	0.0	infeas	4.308345	0.0
+375
+in feasible loop
+375	infeas	6.366032	0.0	infeas	4.538311	0.0
+376
+in feasible loop
+376	infeas	6.849957	0.0	infeas	4.804270	0.0
+377
+in feasible loop
+377	infeas	7.398876	0.0	infeas	5.436173	0.0
+378
+in feasible loop
+378	infeas	7.330885	0.0	infeas	5.105224	0.0
+379
+in feasible loop
+379	infeas	7.590846	0.0	infeas	5.510163	0.0
+380
+in feasible loop
+380	infeas	7.243899	0.0	infeas	5.287196	0.0
+381
+in feasible loop
+381	infeas	7.574848	0.0	infeas	5.455171	0.0
+382
+in feasible loop
+382	infeas	6.400027	0.0	infeas	4.601301	0.0
+383
+in feasible loop
+383	infeas	7.958790	0.0	infeas	5.607148	0.0
+384
+in feasible loop
+384	infeas	7.057926	0.0	infeas	5.072229	0.0
+385
+in feasible loop
+385	infeas	7.693830	0.0	infeas	5.594150	0.0
+386
+in feasible loop
+386	infeas	6.885953	0.0	infeas	5.040234	0.0
+387
+in feasible loop
+387	infeas	6.883954	0.0	infeas	4.826266	0.0
+388
+in feasible loop
+388	infeas	6.968940	0.0	infeas	4.939249	0.0
+389
+in feasible loop
+389	infeas	6.058079	0.0	infeas	4.305346	0.0
+390
+in feasible loop
+390	infeas	6.047081	0.0	infeas	4.366336	0.0
+391
+in feasible loop
+391	infeas	8.208752	0.0	infeas	5.826114	0.0
+392
+in feasible loop
+392	limit	273.525418	0.0	limit	167.739500	0.0
+393
+in feasible loop
+393	infeas	6.198058	0.0	infeas	4.387332	0.0
+394
+in feasible loop
+394	infeas	6.031084	0.0	infeas	4.413329	0.0
+395
+in feasible loop
+395	infeas	8.461714	0.0	infeas	5.780120	0.0
+396
+in feasible loop
+396	infeas	6.402028	0.0	infeas	4.511314	0.0
+397
+in feasible loop
+397	infeas	8.808661	0.0	infeas	6.242050	0.0
+398
+in feasible loop
+398	infeas	4.980243	0.0	infeas	3.696439	0.0
+399
+in feasible loop
+399	limit	278.409675	0.0	limit	169.758192	0.0
+400
+in feasible loop
+400	infeas	5.622146	0.0	infeas	4.026387	0.0
+401
+in feasible loop
+401	infeas	8.545702	0.0	infeas	6.261048	0.0
+402
+in feasible loop
+402	infeas	6.669986	0.0	infeas	4.742279	0.0
+403
+in feasible loop
+403	infeas	6.985938	0.0	infeas	5.015238	0.0
+404
+in feasible loop
+404	infeas	6.197057	0.0	infeas	4.602300	0.0
+405
+in feasible loop
+405	infeas	6.375032	0.0	infeas	4.601300	0.0
+406
+in feasible loop
+406	infeas	7.432870	0.0	infeas	5.454171	0.0
+407
+in feasible loop
+407	infeas	6.742975	0.0	infeas	5.047233	0.0
+408
+in feasible loop
+408	limit	298.006696	0.0	limit	256.496006	0.0
+409
+in feasible loop
+409	infeas	7.373879	0.0	infeas	5.184212	0.0
+410
+in feasible loop
+410	infeas	6.684984	0.0	infeas	4.779274	0.0
+411
+in feasible loop
+411	infeas	7.291891	0.0	infeas	5.277197	0.0
+412
+in feasible loop
+412	infeas	6.864957	0.0	infeas	4.814268	0.0
+413
+in feasible loop
+413	infeas	7.644838	0.0	infeas	5.506163	0.0
+414
+in feasible loop
+414	infeas	6.957942	0.0	infeas	4.862260	0.0
+415
+in feasible loop
+415	infeas	6.024085	0.0	infeas	4.334341	0.0
+416
+in feasible loop
+416	infeas	6.672986	0.0	infeas	4.888256	0.0
+417
+in feasible loop
+417	infeas	5.907102	0.0	infeas	4.211360	0.0
+418
+in feasible loop
+418	infeas	7.143914	0.0	infeas	5.231205	0.0
+419
+in feasible loop
+419	infeas	6.908950	0.0	infeas	4.944248	0.0
+420
+in feasible loop
+420	infeas	6.782969	0.0	infeas	4.850263	0.0
+421
+in feasible loop
+421	infeas	7.563850	0.0	infeas	5.541157	0.0
+422
+in feasible loop
+422	infeas	8.147762	0.0	infeas	5.816116	0.0
+423
+in feasible loop
+423	infeas	6.078076	0.0	infeas	4.335340	0.0
+424
+in feasible loop
+424	infeas	7.078924	0.0	infeas	4.993241	0.0
+425
+in feasible loop
+425	infeas	6.427023	0.0	infeas	4.720283	0.0
+426
+in feasible loop
+426	infeas	7.358881	0.0	infeas	5.254201	0.0
+427
+in feasible loop
+427	infeas	7.061927	0.0	infeas	5.017236	0.0
+428
+in feasible loop
+428	infeas	6.177062	0.0	infeas	4.511314	0.0
+429
+in feasible loop
+429	infeas	6.703981	0.0	infeas	4.951247	0.0
+430
+in feasible loop
+430	infeas	7.351882	0.0	infeas	5.223207	0.0
+431
+in feasible loop
+431	infeas	5.797118	0.0	infeas	4.078380	0.0
+432
+in feasible loop
+432	infeas	7.628840	0.0	infeas	5.514162	0.0
+433
+in feasible loop
+433	infeas	6.627992	0.0	infeas	4.878259	0.0
+434
+in feasible loop
+434	infeas	7.744823	0.0	infeas	5.438172	0.0
+435
+in feasible loop
+435	infeas	6.980939	0.0	infeas	4.898256	0.0
+436
+in feasible loop
+436	infeas	7.463865	0.0	infeas	5.421176	0.0
+437
+in feasible loop
+437	infeas	5.631143	0.0	infeas	4.006391	0.0
+438
+in feasible loop
+438	infeas	6.123070	0.0	infeas	4.308345	0.0
+439
+in feasible loop
+439	infeas	7.460866	0.0	infeas	5.225205	0.0
+440
+in feasible loop
+440	infeas	5.089227	0.0	infeas	3.742430	0.0
+441
+in feasible loop
+441	infeas	6.754974	0.0	infeas	4.878258	0.0
+442
+in feasible loop
+442	infeas	7.824811	0.0	infeas	5.662138	0.0
+443
+in feasible loop
+443	infeas	6.794968	0.0	infeas	4.939249	0.0
+444
+in feasible loop
+444	infeas	5.068230	0.0	infeas	3.553459	0.0
+445
+in feasible loop
+445	infeas	8.194754	0.0	infeas	6.015086	0.0
+446
+in feasible loop
+446	infeas	5.252202	0.0	infeas	3.821418	0.0
+447
+in feasible loop
+447	infeas	8.107769	0.0	infeas	5.793118	0.0
+448
+in feasible loop
+448	infeas	7.356882	0.0	infeas	5.189211	0.0
+449
+in feasible loop
+449	infeas	6.888952	0.0	infeas	4.947248	0.0
+450
+in feasible loop
+450	infeas	7.431871	0.0	infeas	5.383182	0.0
+451
+in feasible loop
+451	infeas	6.210056	0.0	infeas	4.394332	0.0
+452
+in feasible loop
+452	infeas	6.725977	0.0	infeas	4.704285	0.0
+453
+in feasible loop
+453	infeas	7.585846	0.0	infeas	5.608148	0.0
+454
+in feasible loop
+454	infeas	5.332190	0.0	infeas	3.782424	0.0
+455
+in feasible loop
+455	infeas	6.695982	0.0	infeas	4.685288	0.0
+456
+in feasible loop
+456	infeas	7.656836	0.0	infeas	5.632144	0.0
+457
+in feasible loop
+457	infeas	7.672834	0.0	infeas	5.413176	0.0
+458
+in feasible loop
+458	infeas	7.169911	0.0	infeas	5.052232	0.0
+459
+in feasible loop
+459	infeas	7.257896	0.0	infeas	5.259201	0.0
+460
+in feasible loop
+460	infeas	6.325038	0.0	infeas	4.373335	0.0
+461
+in feasible loop
+461	infeas	7.331885	0.0	infeas	5.255201	0.0
+462
+in feasible loop
+462	infeas	6.477016	0.0	infeas	4.444324	0.0
+463
+in feasible loop
+463	infeas	7.328886	0.0	infeas	5.384181	0.0
+464
+in feasible loop
+464	infeas	8.693679	0.0	infeas	6.338037	0.0
+465
+in feasible loop
+465	infeas	5.767123	0.0	infeas	4.140371	0.0
+466
+in feasible loop
+466	infeas	7.292890	0.0	infeas	5.235205	0.0
+467
+in feasible loop
+467	infeas	6.196058	0.0	infeas	4.450323	0.0
+468
+in feasible loop
+468	infeas	6.500012	0.0	infeas	4.792272	0.0
+469
+in feasible loop
+469	infeas	7.281893	0.0	infeas	5.232204	0.0
+470
+in feasible loop
+470	infeas	7.405874	0.0	infeas	5.237204	0.0
+471
+in feasible loop
+471	infeas	6.251050	0.0	infeas	4.405330	0.0
+472
+in feasible loop
+472	infeas	7.057927	0.0	infeas	4.943249	0.0
+473
+in feasible loop
+473	infeas	7.022932	0.0	infeas	4.986241	0.0
+474
+in feasible loop
+474	infeas	6.138068	0.0	infeas	4.425327	0.0
+475
+in feasible loop
+475	limit	278.747624	0.0	limit	170.931014	0.0
+476
+in feasible loop
+476	infeas	5.693135	0.0	infeas	4.224358	0.0
+477
+in feasible loop
+477	infeas	7.784817	0.0	infeas	5.596148	0.0
+478
+in feasible loop
+478	infeas	7.845808	0.0	infeas	5.699134	0.0
+479
+in feasible loop
+479	infeas	6.954943	0.0	infeas	4.934249	0.0
+480
+in feasible loop
+480	infeas	6.626992	0.0	infeas	4.736280	0.0
+481
+in feasible loop
+481	infeas	7.253897	0.0	infeas	5.126222	0.0
+482
+in feasible loop
+482	infeas	5.897103	0.0	infeas	4.286348	0.0
+483
+in feasible loop
+483	infeas	7.401875	0.0	infeas	5.236204	0.0
+484
+in feasible loop
+484	infeas	8.880650	0.0	infeas	6.344036	0.0
+485
+in feasible loop
+485	infeas	6.123069	0.0	infeas	4.315344	0.0
+486
+in feasible loop
+486	infeas	5.876107	0.0	infeas	4.168366	0.0
+487
+in feasible loop
+487	infeas	7.058927	0.0	infeas	5.078228	0.0
+488
+in feasible loop
+488	infeas	8.527703	0.0	infeas	6.107072	0.0
+489
+in feasible loop
+489	infeas	8.604692	0.0	infeas	6.149065	0.0
+490
+in feasible loop
+490	infeas	6.513010	0.0	infeas	4.702284	0.0
+491
+in feasible loop
+491	infeas	7.661836	0.0	infeas	5.546157	0.0
+492
+in feasible loop
+492	infeas	7.848807	0.0	infeas	5.556155	0.0
+493
+in feasible loop
+493	infeas	7.082923	0.0	infeas	5.118223	0.0
+494
+in feasible loop
+494	infeas	5.898102	0.0	infeas	4.318345	0.0
+495
+in feasible loop
+495	infeas	6.757972	0.0	infeas	4.815268	0.0
+496
+in feasible loop
+496	infeas	6.725978	0.0	infeas	5.041233	0.0
+497
+in feasible loop
+497	infeas	8.288740	0.0	infeas	5.886105	0.0
+498
+in feasible loop
+498	infeas	7.406874	0.0	infeas	5.252202	0.0
+499
+in feasible loop
+499	infeas	6.277045	0.0	infeas	4.450324	0.0
+500
+in feasible loop
+500	infeas	6.443020	0.0	infeas	4.709284	0.0
+501
+in feasible loop
+501	infeas	9.867500	0.0	infeas	6.964941	0.0
+502
+in feasible loop
+502	infeas	6.441021	0.0	infeas	4.618298	0.0
+503
+in feasible loop
+503	infeas	7.210904	0.0	infeas	5.181212	0.0
+504
+in feasible loop
+504	infeas	6.734977	0.0	infeas	4.849262	0.0
+505
+in feasible loop
+505	infeas	5.212207	0.0	infeas	3.718435	0.0
+506
+in feasible loop
+506	infeas	7.537854	0.0	infeas	5.401179	0.0
+507
+in feasible loop
+507	infeas	5.607148	0.0	infeas	3.933402	0.0
+508
+in feasible loop
+508	infeas	7.102921	0.0	infeas	5.145217	0.0
+509
+in feasible loop
+509	infeas	7.326886	0.0	infeas	5.418176	0.0
+510
+in feasible loop
+510	infeas	6.613995	0.0	infeas	4.850263	0.0
+511
+in feasible loop
+511	infeas	7.784817	0.0	infeas	5.540157	0.0
+512
+in feasible loop
+512	infeas	7.165910	0.0	infeas	5.100226	0.0
+513
+in feasible loop
+513	infeas	7.180907	0.0	infeas	5.045233	0.0
+514
+in feasible loop
+514	infeas	6.646990	0.0	infeas	4.690287	0.0
+515
+in feasible loop
+515	infeas	5.963093	0.0	infeas	4.314345	0.0
+516
+in feasible loop
+516	infeas	6.971940	0.0	infeas	4.995240	0.0
+517
+in feasible loop
+517	infeas	7.525856	0.0	infeas	5.317192	0.0
+518
+in feasible loop
+518	infeas	8.396723	0.0	infeas	5.938098	0.0
+519
+in feasible loop
+519	infeas	6.101072	0.0	infeas	4.473320	0.0
+520
+in feasible loop
+520	infeas	7.013934	0.0	infeas	4.985242	0.0
+521
+in feasible loop
+521	infeas	7.644838	0.0	infeas	5.370183	0.0
+522
+in feasible loop
+522	infeas	6.496013	0.0	infeas	4.632296	0.0
+523
+in feasible loop
+523	infeas	7.343883	0.0	infeas	5.393181	0.0
+524
+in feasible loop
+524	infeas	7.336884	0.0	infeas	5.236204	0.0
+525
+in feasible loop
+525	infeas	6.434022	0.0	infeas	4.546308	0.0
+526
+in feasible loop
+526	infeas	8.230750	0.0	infeas	5.747126	0.0
+527
+in feasible loop
+527	infeas	8.583695	0.0	infeas	6.145066	0.0
+528
+in feasible loop
+528	infeas	5.009238	0.0	infeas	3.611451	0.0
+529
+in feasible loop
+529	infeas	6.599997	0.0	infeas	4.682287	0.0
+530
+in feasible loop
+530	infeas	5.987090	0.0	infeas	4.389334	0.0
+531
+in feasible loop
+531	infeas	6.766971	0.0	infeas	4.887257	0.0
+532
+in feasible loop
+532	infeas	6.667986	0.0	infeas	4.823267	0.0
+533
+in feasible loop
+533	infeas	7.913796	0.0	infeas	5.593150	0.0
+534
+in feasible loop
+534	infeas	7.225902	0.0	infeas	5.088226	0.0
+535
+in feasible loop
+535	infeas	7.773819	0.0	infeas	5.490165	0.0
+536
+in feasible loop
+536	infeas	7.094921	0.0	infeas	5.102224	0.0
+537
+in feasible loop
+537	infeas	6.806966	0.0	infeas	4.857262	0.0
+538
+in feasible loop
+538	infeas	8.876650	0.0	infeas	6.322039	0.0
+539
+in feasible loop
+539	infeas	7.214903	0.0	infeas	5.173213	0.0
+540
+in feasible loop
+540	infeas	6.046081	0.0	infeas	4.398332	0.0
+541
+in feasible loop
+541	infeas	5.023236	0.0	infeas	3.664443	0.0
+542
+in feasible loop
+542	infeas	6.373032	0.0	infeas	4.696285	0.0
+543
+in feasible loop
+543	infeas	7.236900	0.0	infeas	5.118222	0.0
+544
+in feasible loop
+544	infeas	6.987938	0.0	infeas	5.026235	0.0
+545
+in feasible loop
+545	infeas	6.154065	0.0	infeas	4.468320	0.0
+546
+in feasible loop
+546	infeas	6.674986	0.0	infeas	4.868260	0.0
+547
+in feasible loop
+547	infeas	6.254049	0.0	infeas	4.534311	0.0
+548
+in feasible loop
+548	infeas	7.176908	0.0	infeas	5.170214	0.0
+549
+in feasible loop
+549	infeas	6.106073	0.0	infeas	4.279349	0.0
+550
+in feasible loop
+550	infeas	6.966940	0.0	infeas	5.157216	0.0
+551
+in feasible loop
+551	infeas	6.500013	0.0	infeas	4.574304	0.0
+552
+in feasible loop
+552	infeas	6.126069	0.0	infeas	4.443325	0.0
+553
+in feasible loop
+553	infeas	5.584150	0.0	infeas	4.050385	0.0
+554
+in feasible loop
+554	infeas	7.380878	0.0	infeas	5.139218	0.0
+555
+in feasible loop
+555	infeas	6.376032	0.0	infeas	4.720281	0.0
+556
+in feasible loop
+556	infeas	7.205906	0.0	infeas	5.012237	0.0
+557
+in feasible loop
+557	infeas	7.161911	0.0	infeas	5.105224	0.0
+558
+in feasible loop
+558	limit	264.618772	0.0	limit	175.226362	0.0
+559
+in feasible loop
+559	infeas	7.933794	0.0	infeas	5.628144	0.0
+560
+in feasible loop
+560	infeas	6.870956	0.0	infeas	4.983241	0.0
+561
+in feasible loop
+561	infeas	5.745127	0.0	infeas	4.132372	0.0
+562
+in feasible loop
+562	infeas	8.523704	0.0	infeas	5.949096	0.0
+563
+in feasible loop
+563	infeas	5.836112	0.0	infeas	4.320344	0.0
+564
+in feasible loop
+564	infeas	7.448867	0.0	infeas	5.486167	0.0
+565
+in feasible loop
+565	infeas	7.845807	0.0	infeas	5.562154	0.0
+566
+in feasible loop
+566	infeas	6.247050	0.0	infeas	4.499316	0.0
+567
+in feasible loop
+567	infeas	7.331886	0.0	infeas	5.229205	0.0
+568
+in feasible loop
+568	infeas	8.250746	0.0	infeas	5.944096	0.0
+569
+in feasible loop
+569	infeas	5.998088	0.0	infeas	4.368336	0.0
+570
+in feasible loop
+570	infeas	8.061775	0.0	infeas	5.722130	0.0
+571
+in feasible loop
+571	infeas	7.546852	0.0	infeas	5.376183	0.0
+572
+in feasible loop
+572	infeas	8.014782	0.0	infeas	5.546156	0.0
+573
+in feasible loop
+573	infeas	6.202058	0.0	infeas	4.434326	0.0
+574
+in feasible loop
+574	infeas	7.529855	0.0	infeas	5.426174	0.0
+575
+in feasible loop
+575	infeas	6.191060	0.0	infeas	4.542309	0.0
+576
+in feasible loop
+576	infeas	5.468168	0.0	infeas	3.959399	0.0
+577
+in feasible loop
+577	infeas	6.947944	0.0	infeas	4.914252	0.0
+578
+in feasible loop
+578	infeas	5.639143	0.0	infeas	3.934402	0.0
+579
+in feasible loop
+579	infeas	6.811964	0.0	infeas	4.812269	0.0
+580
+in feasible loop
+580	infeas	6.461018	0.0	infeas	4.609299	0.0
+581
+in feasible loop
+581	infeas	6.387029	0.0	infeas	4.513314	0.0
+582
+in feasible loop
+582	infeas	7.504859	0.0	infeas	5.403179	0.0
+583
+in feasible loop
+583	limit	282.712020	0.0	limit	176.522166	0.0
+584
+in feasible loop
+584	infeas	7.389876	0.0	infeas	5.284197	0.0
+585
+in feasible loop
+585	infeas	7.741822	0.0	infeas	5.444173	0.0
+586
+in feasible loop
+586	infeas	6.934945	0.0	infeas	5.250203	0.0
+587
+in feasible loop
+587	infeas	6.378030	0.0	infeas	4.687287	0.0
+588
+in feasible loop
+588	infeas	8.419721	0.0	infeas	6.084074	0.0
+589
+in feasible loop
+589	infeas	6.456020	0.0	infeas	4.703284	0.0
+590
+in feasible loop
+590	infeas	6.762972	0.0	infeas	4.823267	0.0
+591
+in feasible loop
+591	infeas	6.081075	0.0	infeas	4.504315	0.0
+592
+in feasible loop
+592	infeas	6.036083	0.0	infeas	4.444324	0.0
+593
+in feasible loop
+593	infeas	8.110767	0.0	infeas	5.629144	0.0
+594
+in feasible loop
+594	infeas	7.406875	0.0	infeas	5.319191	0.0
+595
+in feasible loop
+595	infeas	6.465017	0.0	infeas	4.637295	0.0
+596
+in feasible loop
+596	infeas	7.305889	0.0	infeas	5.223207	0.0
+597
+in feasible loop
+597	infeas	7.250897	0.0	infeas	5.117222	0.0
+598
+in feasible loop
+598	infeas	5.928099	0.0	infeas	4.244354	0.0
+599
+in feasible loop
+599	infeas	5.714132	0.0	infeas	4.145370	0.0
+600
+in feasible loop
+600	infeas	6.469016	0.0	infeas	4.578304	0.0
+601
+in feasible loop
+601	infeas	6.675986	0.0	infeas	4.794271	0.0
+602
+in feasible loop
+602	infeas	7.810812	0.0	infeas	5.604149	0.0
+603
+in feasible loop
+603	infeas	5.309192	0.0	infeas	3.873411	0.0
+604
+in feasible loop
+604	infeas	7.469864	0.0	infeas	5.463170	0.0
+605
+in feasible loop
+605	infeas	7.323886	0.0	infeas	5.152217	0.0
+606
+in feasible loop
+606	infeas	7.045930	0.0	infeas	5.038233	0.0
+607
+in feasible loop
+607	infeas	7.482863	0.0	infeas	5.449171	0.0
+608
+in feasible loop
+608	infeas	8.510707	0.0	infeas	5.898102	0.0
+609
+in feasible loop
+609	infeas	7.030932	0.0	infeas	4.964246	0.0
+610
+in feasible loop
+610	infeas	6.916948	0.0	infeas	5.076228	0.0
+611
+in feasible loop
+611	infeas	6.840960	0.0	infeas	4.951247	0.0
+612
+in feasible loop
+612	infeas	5.746127	0.0	infeas	4.157368	0.0
+613
+in feasible loop
+613	infeas	7.710828	0.0	infeas	5.582151	0.0
+614
+in feasible loop
+614	infeas	6.961942	0.0	infeas	4.907254	0.0
+615
+in feasible loop
+615	infeas	7.306889	0.0	infeas	5.282197	0.0
+616
+in feasible loop
+616	infeas	5.624145	0.0	infeas	3.940401	0.0
+617
+in feasible loop
+617	infeas	8.023780	0.0	infeas	5.634144	0.0
+618
+in feasible loop
+618	infeas	7.436869	0.0	infeas	5.189211	0.0
+619
+in feasible loop
+619	infeas	6.760972	0.0	infeas	4.871260	0.0
+620
+in feasible loop
+620	infeas	6.754973	0.0	infeas	4.747278	0.0
+621
+in feasible loop
+621	infeas	7.514857	0.0	infeas	5.515163	0.0
+622
+in feasible loop
+622	infeas	6.355033	0.0	infeas	4.537310	0.0
+623
+in feasible loop
+623	infeas	8.550700	0.0	infeas	6.080076	0.0
+624
+in feasible loop
+624	infeas	8.891649	0.0	infeas	6.308041	0.0
+625
+in feasible loop
+625	infeas	6.723977	0.0	infeas	4.953247	0.0
+626
+in feasible loop
+626	infeas	5.267199	0.0	infeas	3.783425	0.0
+627
+in feasible loop
+627	infeas	7.198905	0.0	infeas	5.039235	0.0
+628
+in feasible loop
+628	limit	276.309994	0.0	limit	171.595914	0.0
+629
+in feasible loop
+629	infeas	7.129915	0.0	infeas	5.124222	0.0
+630
+in feasible loop
+630	infeas	5.389180	0.0	infeas	3.851415	0.0
+631
+in feasible loop
+631	infeas	7.390877	0.0	infeas	5.341187	0.0
+632
+in feasible loop
+632	infeas	6.984938	0.0	infeas	5.078229	0.0
+633
+in feasible loop
+633	infeas	5.936097	0.0	infeas	4.245355	0.0
+634
+in feasible loop
+634	infeas	8.402722	0.0	infeas	5.858109	0.0
+635
+in feasible loop
+635	infeas	6.783970	0.0	infeas	4.610299	0.0
+636
+in feasible loop
+636	infeas	7.951791	0.0	infeas	5.740127	0.0
+637
+in feasible loop
+637	infeas	6.773970	0.0	infeas	4.946249	0.0
+638
+in feasible loop
+638	infeas	5.233204	0.0	infeas	3.959397	0.0
+639
+in feasible loop
+639	infeas	6.390029	0.0	infeas	4.637295	0.0
+640
+in feasible loop
+640	infeas	6.049081	0.0	infeas	4.386333	0.0
+641
+in feasible loop
+641	infeas	6.827962	0.0	infeas	4.883257	0.0
+642
+in feasible loop
+642	infeas	7.325887	0.0	infeas	5.298194	0.0
+643
+in feasible loop
+643	infeas	7.761821	0.0	infeas	5.714131	0.0
+644
+in feasible loop
+644	infeas	7.151912	0.0	infeas	5.174214	0.0
+645
+in feasible loop
+645	infeas	7.300890	0.0	infeas	5.049232	0.0
+646
+in feasible loop
+646	infeas	7.670834	0.0	infeas	5.321191	0.0
+647
+in feasible loop
+647	infeas	7.180909	0.0	infeas	5.233204	0.0
+648
+in feasible loop
+648	infeas	6.444021	0.0	infeas	4.657292	0.0
+649
+in feasible loop
+649	infeas	6.416024	0.0	infeas	4.526312	0.0
+650
+in feasible loop
+650	infeas	7.636839	0.0	infeas	5.267199	0.0
+651
+in feasible loop
+651	infeas	7.075925	0.0	infeas	5.214206	0.0
+652
+in feasible loop
+652	infeas	6.518010	0.0	infeas	4.684288	0.0
+653
+in feasible loop
+653	infeas	7.787816	0.0	infeas	5.688136	0.0
+654
+in feasible loop
+654	infeas	7.418872	0.0	infeas	5.247202	0.0
+655
+in feasible loop
+655	infeas	8.439716	0.0	infeas	6.061080	0.0
+656
+in feasible loop
+656	infeas	6.234051	0.0	infeas	4.372336	0.0
+657
+in feasible loop
+657	infeas	7.902798	0.0	infeas	5.631144	0.0
+658
+in feasible loop
+658	infeas	5.740128	0.0	infeas	4.178365	0.0
+659
+in feasible loop
+659	infeas	8.515705	0.0	infeas	6.213055	0.0
+660
+in feasible loop
+660	infeas	5.986091	0.0	infeas	4.426327	0.0
+661
+in feasible loop
+661	infeas	7.119917	0.0	infeas	5.159216	0.0
+662
+in feasible loop
+662	infeas	6.488014	0.0	infeas	4.511314	0.0
+663
+in feasible loop
+663	infeas	7.846807	0.0	infeas	5.616146	0.0
+664
+in feasible loop
+664	infeas	8.516705	0.0	infeas	6.133067	0.0
+665
+in feasible loop
+665	infeas	7.532856	0.0	infeas	5.427175	0.0
+666
+in feasible loop
+666	infeas	6.078076	0.0	infeas	4.533311	0.0
+667
+in feasible loop
+667	infeas	7.407873	0.0	infeas	5.223206	0.0
+668
+in feasible loop
+668	infeas	7.681833	0.0	infeas	5.471168	0.0
+669
+in feasible loop
+669	infeas	5.220206	0.0	infeas	3.734432	0.0
+670
+in feasible loop
+670	infeas	7.523857	0.0	infeas	5.578152	0.0
+671
+in feasible loop
+671	infeas	5.913101	0.0	infeas	4.092377	0.0
+672
+in feasible loop
+672	infeas	6.517010	0.0	infeas	4.574304	0.0
+673
+in feasible loop
+673	infeas	7.185908	0.0	infeas	5.218206	0.0
+674
+in feasible loop
+674	infeas	6.386030	0.0	infeas	4.610299	0.0
+675
+in feasible loop
+675	infeas	5.029235	0.0	infeas	3.574457	0.0
+676
+in feasible loop
+676	infeas	6.333037	0.0	infeas	4.564306	0.0
+677
+in feasible loop
+677	infeas	7.905798	0.0	infeas	5.559156	0.0
+678
+in feasible loop
+678	infeas	6.754972	0.0	infeas	4.884258	0.0
+679
+in feasible loop
+679	infeas	7.919796	0.0	infeas	5.541157	0.0
+680
+in feasible loop
+680	infeas	5.850111	0.0	infeas	4.332341	0.0
+681
+in feasible loop
+681	infeas	5.925100	0.0	infeas	4.389332	0.0
+682
+in feasible loop
+682	infeas	5.721131	0.0	infeas	4.018389	0.0
+683
+in feasible loop
+683	infeas	5.805118	0.0	infeas	4.058382	0.0
+684
+in feasible loop
+684	infeas	6.939946	0.0	infeas	4.912253	0.0
+685
+in feasible loop
+685	infeas	6.837960	0.0	infeas	4.913253	0.0
+686
+in feasible loop
+686	infeas	6.096074	0.0	infeas	4.496316	0.0
+687
+in feasible loop
+687	infeas	6.618993	0.0	infeas	4.805270	0.0
+688
+in feasible loop
+688	infeas	8.610691	0.0	infeas	6.362032	0.0
+689
+in feasible loop
+689	infeas	5.811117	0.0	infeas	4.260353	0.0
+690
+in feasible loop
+690	infeas	8.300738	0.0	infeas	5.945096	0.0
+691
+in feasible loop
+691	infeas	6.438022	0.0	infeas	4.700285	0.0
+692
+in feasible loop
+692	infeas	6.225053	0.0	infeas	4.628297	0.0
+693
+in feasible loop
+693	infeas	6.026084	0.0	infeas	4.407330	0.0
+694
+in feasible loop
+694	infeas	6.586999	0.0	infeas	4.752277	0.0
+695
+in feasible loop
+695	infeas	8.050776	0.0	infeas	5.697134	0.0
+696
+in feasible loop
+696	infeas	6.023085	0.0	infeas	4.266351	0.0
+697
+in feasible loop
+697	infeas	7.074924	0.0	infeas	5.062230	0.0
+698
+in feasible loop
+698	infeas	7.364881	0.0	infeas	5.174213	0.0
+699
+in feasible loop
+699	infeas	8.404722	0.0	infeas	6.067078	0.0
+700
+in feasible loop
+700	infeas	6.744975	0.0	infeas	4.812268	0.0
+701
+in feasible loop
+701	infeas	7.083924	0.0	infeas	5.213207	0.0
+702
+in feasible loop
+702	infeas	7.476863	0.0	infeas	5.366184	0.0
+703
+in feasible loop
+703	infeas	4.537310	0.0	infeas	3.208512	0.0
+704
+in feasible loop
+704	infeas	7.357882	0.0	infeas	5.029236	0.0
+705
+in feasible loop
+705	infeas	7.516857	0.0	infeas	5.293195	0.0
+706
+in feasible loop
+706	infeas	6.483014	0.0	infeas	4.617299	0.0
+707
+in feasible loop
+707	infeas	8.050776	0.0	infeas	5.715131	0.0
+708
+in feasible loop
+708	infeas	5.737128	0.0	infeas	4.220359	0.0
+709
+in feasible loop
+709	infeas	7.619841	0.0	infeas	5.394180	0.0
+710
+in feasible loop
+710	infeas	8.091769	0.0	infeas	5.691136	0.0
+711
+in feasible loop
+711	infeas	6.312040	0.0	infeas	4.499316	0.0
+712
+in feasible loop
+712	infeas	6.627992	0.0	infeas	4.706285	0.0
+713
+in feasible loop
+713	infeas	7.927795	0.0	infeas	5.690135	0.0
+714
+in feasible loop
+714	infeas	7.801814	0.0	infeas	5.506163	0.0
+715
+in feasible loop
+715	infeas	6.977938	0.0	infeas	5.077228	0.0
+716
+in feasible loop
+716	infeas	6.868956	0.0	infeas	4.896256	0.0
+717
+in feasible loop
+717	infeas	6.597997	0.0	infeas	4.748278	0.0
+718
+in feasible loop
+718	infeas	6.460018	0.0	infeas	4.600301	0.0
+719
+in feasible loop
+719	infeas	5.935098	0.0	infeas	4.374335	0.0
+720
+in feasible loop
+720	infeas	6.938944	0.0	infeas	5.016238	0.0
+721
+in feasible loop
+721	infeas	7.536854	0.0	infeas	5.408178	0.0
+722
+in feasible loop
+722	infeas	5.922100	0.0	infeas	4.221358	0.0
+723
+in feasible loop
+723	infeas	7.388877	0.0	infeas	5.159216	0.0
+724
+in feasible loop
+724	infeas	7.318887	0.0	infeas	5.105224	0.0
+725
+in feasible loop
+725	infeas	7.945792	0.0	infeas	5.847111	0.0
+726
+in feasible loop
+726	infeas	6.159063	0.0	infeas	4.384334	0.0
+727
+in feasible loop
+727	infeas	7.223902	0.0	infeas	5.226206	0.0
+728
+in feasible loop
+728	infeas	5.948095	0.0	infeas	4.249354	0.0
+729
+in feasible loop
+729	infeas	7.224901	0.0	infeas	5.292197	0.0
+730
+in feasible loop
+730	infeas	8.319734	0.0	infeas	5.764124	0.0
+731
+in feasible loop
+731	infeas	6.181060	0.0	infeas	4.573306	0.0
+732
+in feasible loop
+732	infeas	9.012629	0.0	infeas	6.315041	0.0
+733
+in feasible loop
+733	infeas	6.750973	0.0	infeas	4.885257	0.0
+734
+in feasible loop
+734	infeas	6.995937	0.0	infeas	4.933249	0.0
+735
+in feasible loop
+735	infeas	8.318736	0.0	infeas	5.999088	0.0
+736
+in feasible loop
+736	limit	254.882252	0.0	limit	150.609104	0.0
+737
+in feasible loop
+737	infeas	6.093074	0.0	infeas	4.459322	0.0
+738
+in feasible loop
+738	infeas	6.368032	0.0	infeas	4.528311	0.0
+739
+in feasible loop
+739	infeas	6.639991	0.0	infeas	4.807269	0.0
+740
+in feasible loop
+740	infeas	8.714675	0.0	infeas	6.049081	0.0
+741
+in feasible loop
+741	infeas	7.349882	0.0	infeas	5.231205	0.0
+742
+in feasible loop
+742	infeas	7.673834	0.0	infeas	5.468168	0.0
+743
+in feasible loop
+743	infeas	5.386182	0.0	infeas	3.931402	0.0
+744
+in feasible loop
+744	infeas	7.621841	0.0	infeas	5.519160	0.0
+745
+in feasible loop
+745	infeas	6.193059	0.0	infeas	4.452323	0.0
+746
+in feasible loop
+746	infeas	7.343884	0.0	infeas	5.201209	0.0
+747
+in feasible loop
+747	infeas	7.925796	0.0	infeas	5.432173	0.0
+748
+in feasible loop
+748	limit	276.029038	0.0	limit	169.204277	0.0
+749
+in feasible loop
+749	infeas	6.882953	0.0	infeas	4.822267	0.0
+750
+in feasible loop
+750	infeas	6.000088	0.0	infeas	4.338341	0.0
+751
+in feasible loop
+751	infeas	7.412873	0.0	infeas	5.431175	0.0
+752
+in feasible loop
+752	infeas	7.400874	0.0	infeas	5.268199	0.0
+753
+in feasible loop
+753	infeas	7.165911	0.0	infeas	5.160216	0.0
+754
+in feasible loop
+754	limit	255.881099	0.0	limit	96.471335	0.0
+755
+in feasible loop
+755	infeas	7.024932	0.0	infeas	4.989241	0.0
+756
+in feasible loop
+756	infeas	8.360729	0.0	infeas	5.961094	0.0
+757
+in feasible loop
+757	infeas	8.478711	0.0	infeas	6.063079	0.0
+758
+in feasible loop
+758	infeas	6.405026	0.0	infeas	4.633295	0.0
+759
+in feasible loop
+759	infeas	5.317192	0.0	infeas	3.782425	0.0
+760
+in feasible loop
+760	infeas	6.625993	0.0	infeas	4.769274	0.0
+761
+in feasible loop
+761	infeas	7.664836	0.0	infeas	5.482166	0.0
+762
+in feasible loop
+762	infeas	5.423176	0.0	infeas	3.804421	0.0
+763
+in feasible loop
+763	infeas	6.375031	0.0	infeas	4.625296	0.0
+764
+in feasible loop
+764	infeas	7.378879	0.0	infeas	5.318192	0.0
+765
+in feasible loop
+765	infeas	6.080075	0.0	infeas	4.418329	0.0
+766
+in feasible loop
+766	infeas	6.821963	0.0	infeas	5.015237	0.0
+767
+in feasible loop
+767	infeas	6.871955	0.0	infeas	4.852262	0.0
+768
+in feasible loop
+768	infeas	6.407026	0.0	infeas	4.715284	0.0
+769
+in feasible loop
+769	infeas	6.379030	0.0	infeas	4.464322	0.0
+770
+in feasible loop
+770	infeas	6.416024	0.0	infeas	4.503316	0.0
+771
+in feasible loop
+771	infeas	6.188059	0.0	infeas	4.358337	0.0
+772
+in feasible loop
+772	infeas	6.769971	0.0	infeas	4.848263	0.0
+773
+in feasible loop
+773	infeas	6.484014	0.0	infeas	4.760276	0.0
+774
+in feasible loop
+774	infeas	6.488014	0.0	infeas	4.703286	0.0
+775
+in feasible loop
+775	infeas	7.251897	0.0	infeas	5.133219	0.0
+776
+in feasible loop
+776	infeas	9.122614	0.0	infeas	6.483014	0.0
+777
+in feasible loop
+777	infeas	7.758821	0.0	infeas	5.727129	0.0
+778
+in feasible loop
+778	infeas	6.062078	0.0	infeas	4.362337	0.0
+779
+in feasible loop
+779	infeas	6.764972	0.0	infeas	4.862260	0.0
+780
+in feasible loop
+780	infeas	8.733672	0.0	infeas	6.130068	0.0
+781
+in feasible loop
+781	infeas	7.528857	0.0	infeas	5.240202	0.0
+782
+in feasible loop
+782	infeas	5.925099	0.0	infeas	4.318344	0.0
+783
+in feasible loop
+783	infeas	6.345036	0.0	infeas	4.634295	0.0
+784
+in feasible loop
+784	infeas	6.926947	0.0	infeas	4.814268	0.0
+785
+in feasible loop
+785	infeas	6.937945	0.0	infeas	4.995241	0.0
+786
+in feasible loop
+786	infeas	5.294196	0.0	infeas	3.934401	0.0
+787
+in feasible loop
+787	infeas	7.225901	0.0	infeas	5.170214	0.0
+788
+in feasible loop
+788	infeas	6.556004	0.0	infeas	4.705284	0.0
+789
+in feasible loop
+789	infeas	6.901952	0.0	infeas	4.993241	0.0
+790
+in feasible loop
+790	infeas	5.781121	0.0	infeas	4.256353	0.0
+791
+in feasible loop
+791	infeas	6.492012	0.0	infeas	4.591303	0.0
+792
+in feasible loop
+792	infeas	5.997088	0.0	infeas	4.355338	0.0
+793
+in feasible loop
+793	infeas	6.835960	0.0	infeas	4.804270	0.0
+794
+in feasible loop
+794	infeas	7.090922	0.0	infeas	5.035235	0.0
+795
+in feasible loop
+795	infeas	6.583999	0.0	infeas	4.768275	0.0
+796
+in feasible loop
+796	infeas	8.981634	0.0	infeas	6.214056	0.0
+797
+in feasible loop
+797	infeas	6.855957	0.0	infeas	4.921252	0.0
+798
+in feasible loop
+798	infeas	7.490861	0.0	infeas	5.264200	0.0
+799
+in feasible loop
+799	infeas	8.602692	0.0	infeas	6.054080	0.0
+800
+in feasible loop
+800	infeas	5.111223	0.0	infeas	3.705436	0.0
+801
+in feasible loop
+801	infeas	8.225750	0.0	infeas	5.949096	0.0
+802
+in feasible loop
+802	infeas	7.650836	0.0	infeas	5.491166	0.0
+803
+in feasible loop
+803	infeas	6.072077	0.0	infeas	4.328342	0.0
+804
+in feasible loop
+804	infeas	7.229901	0.0	infeas	5.274198	0.0
+805
+in feasible loop
+805	infeas	7.707829	0.0	infeas	5.397179	0.0
+806
+in feasible loop
+806	infeas	6.240051	0.0	infeas	4.490317	0.0
+807
+in feasible loop
+807	infeas	7.289892	0.0	infeas	5.336189	0.0
+808
+in feasible loop
+808	infeas	7.529855	0.0	infeas	5.245203	0.0
+809
+in feasible loop
+809	infeas	6.619993	0.0	infeas	4.689288	0.0
+810
+in feasible loop
+810	infeas	5.560155	0.0	infeas	3.964397	0.0
+811
+in feasible loop
+811	infeas	7.230900	0.0	infeas	5.146218	0.0
+812
+in feasible loop
+812	infeas	6.085075	0.0	infeas	4.299346	0.0
+813
+in feasible loop
+813	infeas	8.075773	0.0	infeas	5.720130	0.0
+814
+in feasible loop
+814	infeas	6.445020	0.0	infeas	4.571305	0.0
+815
+in feasible loop
+815	infeas	6.883954	0.0	infeas	4.780273	0.0
+816
+in feasible loop
+816	infeas	7.955790	0.0	infeas	5.550157	0.0
+817
+in feasible loop
+817	infeas	6.826962	0.0	infeas	4.980243	0.0
+818
+in feasible loop
+818	infeas	7.655836	0.0	infeas	5.544157	0.0
+819
+in feasible loop
+819	infeas	6.720978	0.0	infeas	4.813269	0.0
+820
+in feasible loop
+820	infeas	7.443868	0.0	infeas	5.425176	0.0
+821
+in feasible loop
+821	infeas	7.295890	0.0	infeas	5.228205	0.0
+822
+in feasible loop
+822	infeas	7.353882	0.0	infeas	5.377182	0.0
+823
+in feasible loop
+823	infeas	5.057232	0.0	infeas	3.698438	0.0
+824
+in feasible loop
+824	infeas	7.706828	0.0	infeas	5.569154	0.0
+825
+in feasible loop
+825	infeas	7.277893	0.0	infeas	5.263200	0.0
+826
+in feasible loop
+826	infeas	7.193907	0.0	infeas	5.201209	0.0
+827
+in feasible loop
+827	infeas	6.251049	0.0	infeas	4.652293	0.0
+828
+in feasible loop
+828	infeas	5.837113	0.0	infeas	4.177365	0.0
+829
+in feasible loop
+829	infeas	5.979090	0.0	infeas	4.170367	0.0
+830
+in feasible loop
+830	infeas	6.756973	0.0	infeas	4.750277	0.0
+831
+in feasible loop
+831	infeas	6.290044	0.0	infeas	4.499316	0.0
+832
+in feasible loop
+832	infeas	7.448867	0.0	infeas	5.402180	0.0
+833
+in feasible loop
+833	infeas	6.592998	0.0	infeas	4.781273	0.0
+834
+in feasible loop
+834	infeas	5.936097	0.0	infeas	4.281349	0.0
+835
+in feasible loop
+835	infeas	5.755126	0.0	infeas	4.226357	0.0
+836
+in feasible loop
+836	infeas	6.899951	0.0	infeas	4.946248	0.0
+837
+in feasible loop
+837	infeas	7.138915	0.0	infeas	5.167214	0.0
+838
+in feasible loop
+838	infeas	7.260896	0.0	infeas	5.022237	0.0
+839
+in feasible loop
+839	infeas	8.970636	0.0	infeas	6.308041	0.0
+840
+in feasible loop
+840	infeas	5.870108	0.0	infeas	4.196362	0.0
+841
+in feasible loop
+841	infeas	6.840960	0.0	infeas	4.815268	0.0
+842
+in feasible loop
+842	infeas	5.252201	0.0	infeas	3.686440	0.0
+843
+in feasible loop
+843	infeas	6.503012	0.0	infeas	4.582303	0.0
+844
+in feasible loop
+844	infeas	7.554851	0.0	infeas	5.448172	0.0
+845
+in feasible loop
+845	infeas	6.616994	0.0	infeas	4.749277	0.0
+846
+in feasible loop
+846	infeas	8.543702	0.0	infeas	5.984090	0.0
+847
+in feasible loop
+847	infeas	7.338884	0.0	infeas	5.203210	0.0
+848
+in feasible loop
+848	infeas	6.700981	0.0	infeas	4.896256	0.0
+849
+in feasible loop
+849	infeas	6.555003	0.0	infeas	4.714283	0.0
+850
+in feasible loop
+850	infeas	7.577849	0.0	infeas	5.431174	0.0
+851
+in feasible loop
+851	infeas	6.135067	0.0	infeas	4.295347	0.0
+852
+in feasible loop
+852	infeas	7.940793	0.0	infeas	5.757125	0.0
+853
+in feasible loop
+853	limit	265.375656	0.0	limit	75.167573	0.0
+854
+in feasible loop
+854	infeas	5.732128	0.0	infeas	4.121374	0.0
+855
+in feasible loop
+855	infeas	7.109919	0.0	infeas	5.206209	0.0
+856
+in feasible loop
+856	infeas	7.339884	0.0	infeas	5.264199	0.0
+857
+in feasible loop
+857	infeas	6.597997	0.0	infeas	4.777274	0.0
+858
+in feasible loop
+858	infeas	7.948792	0.0	infeas	5.686135	0.0
+859
+in feasible loop
+859	infeas	5.506163	0.0	infeas	3.948400	0.0
+860
+in feasible loop
+860	infeas	7.626841	0.0	infeas	5.394179	0.0
+861
+in feasible loop
+861	infeas	7.025933	0.0	infeas	4.977243	0.0
+862
+in feasible loop
+862	infeas	6.989937	0.0	infeas	5.027236	0.0
+863
+in feasible loop
+863	infeas	6.572001	0.0	infeas	4.703285	0.0
+864
+in feasible loop
+864	infeas	6.418025	0.0	infeas	4.760276	0.0
+865
+in feasible loop
+865	infeas	6.137066	0.0	infeas	4.531312	0.0
+866
+in feasible loop
+866	infeas	7.202905	0.0	infeas	5.224206	0.0
+867
+in feasible loop
+867	infeas	5.950095	0.0	infeas	4.325343	0.0
+868
+in feasible loop
+868	infeas	6.126068	0.0	infeas	4.425327	0.0
+869
+in feasible loop
+869	infeas	6.800966	0.0	infeas	4.873260	0.0
+870
+in feasible loop
+870	infeas	7.073924	0.0	infeas	5.117222	0.0
+871
+in feasible loop
+871	infeas	7.785817	0.0	infeas	5.467169	0.0
+872
+in feasible loop
+872	infeas	5.039233	0.0	infeas	3.607452	0.0
+873
+in feasible loop
+873	infeas	6.696982	0.0	infeas	4.681289	0.0
+874
+in feasible loop
+874	infeas	7.466864	0.0	infeas	5.323191	0.0
+875
+in feasible loop
+875	infeas	6.507011	0.0	infeas	4.694287	0.0
+876
+in feasible loop
+876	infeas	6.904949	0.0	infeas	4.800270	0.0
+877
+in feasible loop
+877	infeas	6.806966	0.0	infeas	4.743279	0.0
+878
+in feasible loop
+878	infeas	7.618841	0.0	infeas	5.336189	0.0
+879
+in feasible loop
+879	infeas	6.485015	0.0	infeas	4.703284	0.0
+880
+in feasible loop
+880	infeas	6.193059	0.0	infeas	4.465322	0.0
+881
+in feasible loop
+881	infeas	7.515856	0.0	infeas	5.383183	0.0
+882
+in feasible loop
+882	infeas	7.004934	0.0	infeas	5.106224	0.0
+883
+in feasible loop
+883	infeas	7.545853	0.0	infeas	5.282197	0.0
+884
+in feasible loop
+884	infeas	5.680136	0.0	infeas	4.162368	0.0
+885
+in feasible loop
+885	infeas	7.111918	0.0	infeas	5.197210	0.0
+886
+in feasible loop
+886	infeas	7.257897	0.0	infeas	5.166215	0.0
+887
+in feasible loop
+887	infeas	7.876803	0.0	infeas	5.578151	0.0
+888
+in feasible loop
+888	infeas	8.072773	0.0	infeas	5.728129	0.0
+889
+in feasible loop
+889	infeas	6.431023	0.0	infeas	4.538309	0.0
+890
+in feasible loop
+890	infeas	5.726130	0.0	infeas	4.174365	0.0
+891
+in feasible loop
+891	infeas	7.738824	0.0	infeas	5.651140	0.0
+892
+in feasible loop
+892	infeas	6.797967	0.0	infeas	4.832266	0.0
+893
+in feasible loop
+893	limit	276.132022	0.0	limit	164.157044	0.0
+894
+in feasible loop
+894	infeas	8.442716	0.0	infeas	5.941097	0.0
+895
+in feasible loop
+895	infeas	6.021084	0.0	infeas	4.327343	0.0
+896
+in feasible loop
+896	infeas	6.137067	0.0	infeas	4.430327	0.0
+897
+in feasible loop
+897	infeas	6.558002	0.0	infeas	4.627297	0.0
+898
+in feasible loop
+898	infeas	7.164911	0.0	infeas	5.044233	0.0
+899
+in feasible loop
+899	infeas	6.274046	0.0	infeas	4.578304	0.0
+900
+in feasible loop
+900	infeas	6.568001	0.0	infeas	4.512314	0.0
+901
+in feasible loop
+901	infeas	5.543158	0.0	infeas	4.034386	0.0
+902
+in feasible loop
+902	infeas	6.365033	0.0	infeas	4.537310	0.0
+903
+in feasible loop
+903	limit	257.989779	0.0	limit	71.001207	0.0
+904
+in feasible loop
+904	infeas	7.905798	0.0	infeas	5.696134	0.0
+905
+in feasible loop
+905	infeas	7.463865	0.0	infeas	5.328190	0.0
+906
+in feasible loop
+906	infeas	6.648989	0.0	infeas	4.862261	0.0
+907
+in feasible loop
+907	infeas	6.801967	0.0	infeas	4.857260	0.0
+908
+in feasible loop
+908	infeas	7.986787	0.0	infeas	5.591149	0.0
+909
+in feasible loop
+909	infeas	5.130221	0.0	infeas	3.659443	0.0
+910
+in feasible loop
+910	limit	281.980133	0.0	limit	171.749890	0.0
+911
+in feasible loop
+911	infeas	8.100768	0.0	infeas	5.704133	0.0
+912
+in feasible loop
+912	infeas	7.215904	0.0	infeas	5.116221	0.0
+913
+in feasible loop
+913	infeas	7.025932	0.0	infeas	5.021237	0.0
+914
+in feasible loop
+914	infeas	6.809965	0.0	infeas	4.745279	0.0
+915
+in feasible loop
+915	limit	250.062984	0.0	limit	72.143032	0.0
+916
+in feasible loop
+916	infeas	7.230901	0.0	infeas	5.216208	0.0
+917
+in feasible loop
+917	infeas	6.057079	0.0	infeas	4.306345	0.0
+918
+in feasible loop
+918	infeas	5.694134	0.0	infeas	4.275350	0.0
+919
+in feasible loop
+919	infeas	6.743975	0.0	infeas	4.743279	0.0
+920
+in feasible loop
+920	infeas	6.702981	0.0	infeas	4.917253	0.0
+921
+in feasible loop
+921	infeas	7.903798	0.0	infeas	5.546156	0.0
+922
+in feasible loop
+922	infeas	6.476016	0.0	infeas	4.572305	0.0
+923
+in feasible loop
+923	infeas	9.416569	0.0	infeas	6.736976	0.0
+924
+in feasible loop
+924	infeas	6.328038	0.0	infeas	4.543309	0.0
+925
+in feasible loop
+925	infeas	7.481863	0.0	infeas	5.258200	0.0
+926
+in feasible loop
+926	infeas	7.965789	0.0	infeas	5.635144	0.0
+927
+in feasible loop
+927	infeas	7.873803	0.0	infeas	5.848110	0.0
+928
+in feasible loop
+928	infeas	6.704981	0.0	infeas	4.744279	0.0
+929
+in feasible loop
+929	infeas	7.005935	0.0	infeas	5.058230	0.0
+930
+in feasible loop
+930	infeas	6.899952	0.0	infeas	4.898255	0.0
+931
+in feasible loop
+931	infeas	5.978092	0.0	infeas	4.296346	0.0
+932
+in feasible loop
+932	infeas	7.938793	0.0	infeas	5.700134	0.0
+933
+in feasible loop
+933	infeas	8.785664	0.0	infeas	6.264048	0.0
+934
+in feasible loop
+934	infeas	6.491013	0.0	infeas	4.687288	0.0
+935
+in feasible loop
+935	infeas	8.246745	0.0	infeas	5.997089	0.0
+936
+in feasible loop
+936	infeas	6.921948	0.0	infeas	5.010239	0.0
+937
+in feasible loop
+937	infeas	7.282892	0.0	infeas	5.339189	0.0
+938
+in feasible loop
+938	infeas	6.090073	0.0	infeas	4.455323	0.0
+939
+in feasible loop
+939	infeas	6.109072	0.0	infeas	4.374334	0.0
+940
+in feasible loop
+940	infeas	5.972093	0.0	infeas	4.271350	0.0
+941
+in feasible loop
+941	limit	265.978565	0.0	limit	163.235184	0.0
+942
+in feasible loop
+942	infeas	5.919101	0.0	infeas	4.258353	0.0
+943
+in feasible loop
+943	infeas	6.938945	0.0	infeas	4.981242	0.0
+944
+in feasible loop
+944	infeas	5.906103	0.0	infeas	4.392332	0.0
+945
+in feasible loop
+945	infeas	7.655836	0.0	infeas	5.522160	0.0
+946
+in feasible loop
+946	infeas	5.797119	0.0	infeas	4.246355	0.0
+947
+in feasible loop
+947	infeas	7.337884	0.0	infeas	5.113222	0.0
+948
+in feasible loop
+948	infeas	8.379727	0.0	infeas	6.033083	0.0
+949
+in feasible loop
+949	infeas	5.925099	0.0	infeas	4.182364	0.0
+950
+in feasible loop
+950	infeas	7.902799	0.0	infeas	5.770123	0.0
+951
+in feasible loop
+951	infeas	7.024931	0.0	infeas	4.984242	0.0
+952
+in feasible loop
+952	infeas	6.225055	0.0	infeas	4.453323	0.0
+953
+in feasible loop
+953	infeas	7.135915	0.0	infeas	5.114222	0.0
+954
+in feasible loop
+954	infeas	7.986786	0.0	infeas	5.719131	0.0
+955
+in feasible loop
+955	infeas	8.060775	0.0	infeas	5.767122	0.0
+956
+in feasible loop
+956	infeas	7.497861	0.0	infeas	5.371183	0.0
+957
+in feasible loop
+957	infeas	6.034082	0.0	infeas	4.270351	0.0
+958
+in feasible loop
+958	infeas	6.673985	0.0	infeas	4.782274	0.0
+959
+in feasible loop
+959	infeas	6.280045	0.0	infeas	4.498317	0.0
+960
+in feasible loop
+960	limit	267.657309	0.0	limit	73.210871	0.0
+961
+in feasible loop
+961	infeas	6.621993	0.0	infeas	4.762276	0.0
+962
+in feasible loop
+962	infeas	7.146913	0.0	infeas	5.192211	0.0
+963
+in feasible loop
+963	infeas	5.885105	0.0	infeas	4.288348	0.0
+964
+in feasible loop
+964	infeas	7.164911	0.0	infeas	5.150217	0.0
+965
+in feasible loop
+965	infeas	6.589999	0.0	infeas	4.860260	0.0
+966
+in feasible loop
+966	infeas	6.904951	0.0	infeas	5.076229	0.0
+967
+in feasible loop
+967	infeas	6.557002	0.0	infeas	4.553308	0.0
+968
+in feasible loop
+968	infeas	6.610995	0.0	infeas	4.850262	0.0
+969
+in feasible loop
+969	infeas	5.521162	0.0	infeas	3.907405	0.0
+970
+in feasible loop
+970	infeas	7.755821	0.0	infeas	5.548157	0.0
+971
+in feasible loop
+971	infeas	6.054079	0.0	infeas	4.399331	0.0
+972
+in feasible loop
+972	infeas	7.378878	0.0	infeas	5.227206	0.0
+973
+in feasible loop
+973	infeas	5.028236	0.0	infeas	3.711436	0.0
+974
+in feasible loop
+974	infeas	5.441172	0.0	infeas	3.993393	0.0
+975
+in feasible loop
+975	infeas	7.074925	0.0	infeas	4.979243	0.0
+976
+in feasible loop
+976	infeas	7.321887	0.0	infeas	5.185212	0.0
+977
+in feasible loop
+977	infeas	5.626144	0.0	infeas	4.034387	0.0
+978
+in feasible loop
+978	infeas	7.531855	0.0	infeas	5.313192	0.0
+979
+in feasible loop
+979	infeas	7.374879	0.0	infeas	5.104224	0.0
+980
+in feasible loop
+980	infeas	7.204905	0.0	infeas	5.283196	0.0
+981
+in feasible loop
+981	infeas	6.163063	0.0	infeas	4.457323	0.0
+982
+in feasible loop
+982	infeas	6.274046	0.0	infeas	4.615298	0.0
+983
+in feasible loop
+983	infeas	5.963094	0.0	infeas	4.287348	0.0
+984
+in feasible loop
+984	infeas	7.684832	0.0	infeas	5.374182	0.0
+985
+in feasible loop
+985	infeas	6.481015	0.0	infeas	4.673290	0.0
+986
+in feasible loop
+986	infeas	7.824811	0.0	infeas	5.493164	0.0
+987
+in feasible loop
+987	infeas	5.989090	0.0	infeas	4.457323	0.0
+988
+in feasible loop
+988	infeas	7.188906	0.0	infeas	5.074229	0.0
+989
+in feasible loop
+989	infeas	5.585152	0.0	infeas	4.035385	0.0
+990
+in feasible loop
+990	infeas	7.633840	0.0	infeas	5.403179	0.0
+991
+in feasible loop
+991	infeas	6.553004	0.0	infeas	4.517313	0.0
+992
+in feasible loop
+992	infeas	7.875802	0.0	infeas	5.719131	0.0
+993
+in feasible loop
+993	infeas	8.061774	0.0	infeas	5.750126	0.0
+994
+in feasible loop
+994	infeas	7.499860	0.0	infeas	5.421176	0.0
+995
+in feasible loop
+995	infeas	6.890952	0.0	infeas	4.849264	0.0
+996
+in feasible loop
+996	infeas	7.901798	0.0	infeas	5.618146	0.0
+997
+in feasible loop
+997	infeas	6.607996	0.0	infeas	4.794270	0.0
+998
+in feasible loop
+998	infeas	6.618994	0.0	infeas	4.663292	0.0
+999
+in feasible loop
+999	infeas	6.412025	0.0	infeas	4.559306	0.0
+1000
+in feasible loop
+1000	limit	292.124591	0.0	limit	241.940219	0.0
+
+session time, 38837.821518
+session max time, 100000.000000
+
+0	0.000000	0	0.000000	967	6.917723	967	4.961190	33	272.926206	33	140.187082	15.696003	9.423644

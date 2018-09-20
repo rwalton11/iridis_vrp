@@ -1,0 +1,132 @@
+#data for full rnli formulation
+
+/*
+--------------------------------------------------------------------------------------
+first we read in data that is provided
+--------------------------------------------------------------------------------------
+*/
+
+/*
+
+ these are not needed for the randomised data, as they are generated just from the rand paramters
+
+# sets relating to nodes in newtork
+
+set JOBS:=;
+set DEPOTS:=;
+
+# set of technicians
+
+set TECHS :=;
+
+# sets relaitng to skill levels
+
+set SKL_DOM:= ;
+set SKL_LVL:= ;
+*/
+
+printf "%s\n%s\n%s\n%s\n%s", "  ","------------------------------","beginning of .dat file","-------------------------------","  ">log_file;
+data;
+
+# parameters to specify size of random dat set
+
+param rand_locs := 2;
+param rand_jobs := 16;
+param rand_depots := 2;
+param rand_techs := 8;
+param rand_skldom := 2;
+param rand_skllvl := 2;
+
+# parameters relating to time
+
+param weeks_count:=1;
+param days_week:= 5;
+
+param hours_day:=
+1	8
+2	8
+3	8
+4	8
+5	8
+;
+
+param max_travel := 3; 
+param night_away_travel := 1.5;
+
+param weight:=
+1	1
+2	1
+3	1
+;
+
+param cost_travel := 1;
+param cost_nights := 1;
+param cost_late := 1;
+
+#param duration : := ;
+
+#param start:= ;
+#param finish:= ;
+
+#param tech_min default 1:= ;
+#param tech_max default 2:= ;
+
+#param travel : := ;
+
+#param skl_tech : := ;
+#param skl_req: := ;
+
+#param work_hours:= ;
+
+#param tech_base: := ;
+
+/* 
+--------------------------------------------------------------------------------------
+ then we calculated unknown parameters
+--------------------------------------------------------------------------------------
+*/
+
+# calculation of job_tech and job_tech2 paramters
+# relating to job feasibility
+
+for {j in JOBS, k in TECHS}{
+	let test:=0;
+	if tech_min[j]=1 
+		then for {s in SKL_DOM, l in SKL_LVL}{
+			if skl_tech[k,s,l]>=skl_req[j,s,l] 
+				then {
+					let test := test +1;
+			   	};
+		};
+	if test==card{SKL_DOM}*card{SKL_LVL} 
+		then {
+			let job_tech[j,k]:=1;
+			let JOB_TECH := JOB_TECH union {(j,k)};
+		     };
+};
+
+
+for {j in JOBS, k in TECHS, kp in TECHS:k!=kp}{
+	let test:=0;
+	if tech_max[j]=2
+		then for {s in SKL_DOM, l in SKL_LVL}{
+			if skl_tech[k,s,l]+skl_tech[kp,s,l]>=skl_req[j,s,l] 
+				then {
+					let test := test+1;
+			     	};
+		};
+	if test==card{SKL_DOM}*card{SKL_LVL} 
+		then {
+			let job_tech2[j,k,kp]:=1;
+			let JOB_TECH2 := JOB_TECH2 union {(j,k,kp)};
+		     };
+};
+
+#for {h in HOURS}{
+for {h in 1..(weeks_count+1)*hours_week}{
+	for {d in DAYS}{
+		if (if h mod hours_week>0 then h mod hours_week else hours_week) > sum{i in 1..d}hours_day[i]-hours_day[d] then let day_t[h]:=d;
+	};
+};
+
+printf "%s\n%s\n%s\n%s\n%s", "  ","------------------------------","end of .dat file","-------------------------------","  ">log_file;

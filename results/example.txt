@@ -1,0 +1,132 @@
+option randseed 1534432860378037;
+option randseed 1534432860378037;
+rand_jobs = 8
+
+rand_depots = 2
+
+rand_techs = 4
+
+rand_skldom = 2
+
+rand_skllvl = 2
+
+max_travel = 3
+
+weeks_count = 2
+
+days_week = 5
+
+hours_day [*] :=
+1 8   2 8   3 8   4 8   5 8
+;
+
+tech_min [*] :=
+1 1   2 1   3 1   4 2   5 1   6 1   7 1   8 1
+;
+
+tech_max [*] :=
+1 1   2 2   3 1   4 2   5 2   6 1   7 2   8 2
+;
+
+duration [*,*]
+:   1    2     :=
+1   28   -1
+2    8    4
+3    5   -1
+4   -1   32
+5    6    3
+6    7   -1
+7   27   14
+8   32   16
+;
+
+start [*] :=
+1  1   2 41   3  1   4  1   5  1   6  1   7 41   8  1
+;
+
+finish [*] :=
+1 80   2 80   3 80   4 80   5 80   6 80   7 80   8 80
+;
+
+travel [*,*]
+:    1   2   3   4   5   6   7   8   9  10    :=
+1    0   1   1   3   2   1   1   3   2   3
+2    1   0   1   2   2   1   2   3   2   3
+3    1   1   0   2   2   2   3   2   2   2
+4    3   2   2   0   2   1   2   2   3   2
+5    2   2   2   2   0   2   2   2   3   1
+6    1   1   2   1   2   0   2   1   1   3
+7    1   2   3   2   2   2   0   1   3   2
+8    3   3   2   2   2   1   1   0   2   2
+9    2   2   2   3   3   1   3   2   0   2
+10   3   3   2   2   1   3   2   2   2   0
+;
+
+skl_tech [*,1,*]
+:   1   2    :=
+1   1   1
+2   1   0
+3   1   1
+4   1   1
+
+ [*,2,*]
+:   1   2    :=
+1   1   1
+2   1   1
+3   1   1
+4   1   1
+;
+
+skl_req [*,1,*]
+:   1   2    :=
+1   1   1
+2   1   0
+3   0   0
+4   0   0
+5   1   0
+6   1   0
+7   1   0
+8   1   1
+
+ [*,2,*]
+:   1   2    :=
+1   0   0
+2   0   0
+3   1   1
+4   2   0
+5   1   0
+6   0   0
+7   0   0
+8   1   0
+;
+
+work_hours [*] :=
+1 40   2 40   3 40   4 40
+;
+
+base [*] :=
+1  9   2  9   3 10   4 10
+;
+
+lateness [*] :=
+1 0   2 1   3 0   4 0   5 0   6 0   7 0   8 0
+;
+
+weight [*] :=
+1 1   2 1   3 1
+;
+
+jobs, 8
+depots, 2
+techs, 4
+skill domains, 2
+skill levels, 2
+weeks, 2
+tech hours, 320
+runs, 1000
+problem testing: var_leave, var_arrive, var_start, var_twotech,
+  var_night_away, var_hours_tech, var_tech_pair, var_late, objective,
+  c_tech_min, c_tech_max, c_tech_inout, c_return_home, c_arcs, c_twotech,
+  c_pair_balance, c_pair_sym, c_pair_ub, c_tw_arrive, c_tw_leave,
+  c_start_time, c_finish_time;
+Count	Result	Gurobi	CPLEX	Objective

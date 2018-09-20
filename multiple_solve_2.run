@@ -1,0 +1,250 @@
+#model rand_init.mod;
+
+#data rand.dat;
+#param log_file = 'output.txt';
+#print "  ">log_file;
+#print "start of solving formulation">log_file;
+
+#param time_lim = 60;
+
+option display_1col 0;
+option solver_msg 0;
+option cplex_options 'time=60';
+option gurobi_options 'timelim=60';
+param feasible;
+param n_runs = 1000;
+
+param cplex_time;
+param gurobi_time;
+
+/*
+printf "problem will be solved %d times",n_runs > log_file;
+print "  ">log_file;
+print  "|----------------------------|">log_file;
+print  "|      Set      |    Size    |">log_file;
+print  "|---------------|------------|">log_file;
+printf "| Jobs          |    %4d    |\n", card(JOBS)>log_file;
+printf "| Depots        |    %4d    |\n", card(DEPOTS)>log_file;
+printf "| All Nodes     |    %4d    |\n", card(ALL_NODES)>log_file;
+printf "| Technicians   |    %4d    |\n", card(TECHS)>log_file;
+printf "| Skill Domains |    %4d    |\n", card(SKL_DOM)>log_file;
+printf "| Skill Levels  |    %4d    |\n", card(SKL_LVL)>log_file;
+printf "| Weeks         |    %4d    |\n", card(WEEKS)>log_file;
+printf "| Days per week |    %4d    |\n", card(DAYS)>log_file;
+printf "| Hours         |    %4d    |\n", card(HOURS)>_log_file;
+print  "|----------------------------|">log_file;
+print "  ">log_file;
+*/
+
+param tech_hours;
+param req_hours;
+
+problem testing:
+	var_leave,
+	var_arrive,
+#	var_tracking,
+	var_start,
+	var_twotech,
+	var_night_away,
+	var_hours_tech,
+#	var_job_split,
+	var_tech_pair,
+	var_late,
+
+	objective,
+
+	c_tech_min,			# var_leave
+	c_tech_max,			# var_leave
+	c_tech_inout,			# var_leave
+	c_return_home,			# var_leave
+	c_arcs,				# var_leave, var_arrive
+	c_twotech,			# var_leave, var_twotech
+	c_pair_balance,			# var_twotech, var_tech_pair
+	c_pair_sym,			# var_tech_pair
+	c_pair_ub,			# var_leave, var_tech_pair
+	c_tw_arrive,			# var_arrive, var_start
+#	c_tw_arrive_r,			# var_arrive, var_start
+#	c_tw_arrive_rz,			# var_arrive, var_start, var_twotech
+	c_tw_leave,			# var_leave, var_start
+#	c_tw_leave_r,			# var_leave, var_start
+#	c_tw_leave_rz,			# var_leave, var_start, var_twotech
+	c_start_time,			# var_start
+	c_finish_time			# var_start, var_twotech, var_late
+#	c_tracking_balance,		# var_tracking, var_twotech
+#	c_tracking_tech_balance		# var_leave, var_tracking, var_twotech
+/*	c_hours_tech_balance,		# var_leave, var_hours_tech, var_twotech
+#	c_hours_balance			# var_hours_tech, var_twotech
+	c_hours_tech_pair_1,		# var_tech_pair, var_hours_tech
+	c_hours_tech_pair_2,		# var_tech_pair, var_hours_tech
+	c_job_order,			# var_leave, var_start, var_twotech
+	c_day_capacity,			# var_leave, var_hours_tech
+#	c_night_away_lb,		# var_leave, var_tech_pair, var_night_away
+#	c_night_away_ub,			# var_leave, var_tech_pair, var_night_away
+#	c_job_split_lb,			# var_leave, var_tech_pair, var_job_split
+#	c_job_split_ub,			# var_leave, var_tech_pair, var_job_split
+#	c_consec_tracking_a,		# var_arrive, var_tracking, var_twotech
+#	c_consec_tracking_l		# var_leave, var_tracking, var_twotech
+#	c_consec_split_a,		# var_arrive, var_job_split, var_twotech
+#	c_consec_split_l,		# var_leave, var_job_split, var_twotech
+#	c_consec_hours_a		# var_arrive, var_hours_tech, var_twotech
+	c_consec_hours_l		# var_leave, var_hours_tech, var_twotech
+*/
+;
+
+let tech_hours := weeks_count*hours_week*card(TECHS);
+printf 'jobs, %d\n', card(JOBS); 
+printf 'depots, %d\n', card(DEPOTS);
+printf 'techs, %d\n', card(TECHS);
+printf 'skill domains, %d\n', card(SKL_DOM);
+printf 'skill levels, %d\n', card(SKL_LVL);
+printf 'weeks, %d\n', card(WEEKS);
+printf 'tech hours, %d\n', tech_hours;
+
+printf 'runs, %d\n', n_runs;
+
+
+param twotech_lb_count;
+param twotech_ub_count;
+
+show testing;
+
+#let infeasible_count := 0;
+
+#option solver gurobi;
+#print 'Result,Gurobi time,CPLEX time,Objective,Required hours, jobs that req 2 techs, jobs that allow 2 techs';
+#print 'Count,Result,Gurobi,CPLEX,Objective';
+printf '%s\t%s\t%s\t%s\t%s\n','Count','Result','Gurobi','CPLEX','Objective';
+
+param g_status symbolic;
+param c_status symbolic;
+param g_sol;
+param c_sol;
+
+param g_sol_avg;
+param g_inf_avg;
+param g_lim_avg;
+param g_avg;
+
+param c_sol_avg;
+param c_inf_avg;
+param c_lim_avg;
+param c_avg;
+
+param g_sol_count;
+param g_inf_count;
+param g_lim_count;
+param c_sol_count;
+param c_inf_count;
+param c_lim_count;
+
+let g_sol_avg := 0;
+let g_inf_avg := 0;
+let g_lim_avg := 0;
+let c_sol_avg := 0;
+let c_inf_avg := 0;
+let c_lim_avg := 0;
+
+let g_sol_count := 0;
+let g_inf_count := 0;
+let g_lim_count := 0;
+let c_sol_count := 0;
+let c_inf_count := 0;
+let c_lim_count := 0;
+
+
+
+for {n in 1..n_runs}{
+	
+	print "-----------------------------------------------------------------" >> log_file;
+#	display duration1,duration2;
+#	display duration;
+
+	let feasible := 0;
+
+	let req_hours := sum{j in JOBS}(if duration[j,1]>0 then duration[j,1] else 2*duration[j,2]);
+	#display tech_hours,req_hours;
+	if req_hours > tech_hours then
+		{let feasible := 1;};
+
+	for{j in JOBS}{
+		if (sum{k in TECHS}job_tech[j,k]=0) and (sum{k in TECHS, kp in TECHS}job_tech2[j,k,kp]=0)
+			then {let feasible:=1;}
+	};
+
+#	if feasible == 1 then {
+		#print "-----------------------------------------------------------------";
+		#print "this problem is infeasible";
+		#print "-----------------------------------------------------------------";
+#		let infeasible_count := infeasible_count+1;
+#	};
+
+	if feasible == 0 then {
+#		let twotech_lb_count:=0;
+#		let twotech_ub_count:=0;
+
+#		for{j in JOBS}{
+#			if tech_min[j]=2 then {let twotech_lb_count:=twotech_lb_count+1;};
+#			if tech_max[j]=2 then {let twotech_ub_count:=twotech_ub_count+1;};
+#		};
+		
+		option solver gurobi;
+		solve testing > log_file;
+#		print solve_message #  > log_file;
+		let gurobi_time := _solve_time;
+		let g_status := substr(solve_result,1,6);
+		let g_sol := objective;
+
+		if solve_result="solved" then {let g_sol_count := g_sol_count+1;let g_sol_avg := g_sol_avg+_solve_time;};
+		if solve_result="infeasible" then {let g_inf_count := g_inf_count+1;let g_inf_avg := g_inf_avg+_solve_time;};
+		if solve_result="limit" then {let g_lim_count := g_lim_count+1;let g_lim_avg := g_lim_avg+_solve_time;};
+
+		option solver cplexamp;
+		solve testing > log_file;
+#		print solve_message; # > log_file;
+		let cplex_time := _solve_time;
+		let c_status := substr(solve_result,1,6);
+		let c_sol := objective;
+
+		if solve_result="solved" then {let c_sol_count := c_sol_count+1;let c_sol_avg := c_sol_avg+_solve_time;};
+		if solve_result="infeasible" then {let c_inf_count := c_inf_count+1;let c_inf_avg := c_inf_avg+_solve_time;};
+		if solve_result="limit" then {let c_lim_count := c_lim_count+1;let c_lim_avg := c_lim_avg+_solve_time;};
+
+
+		#printf "%s,\t%f,\t%f,\t%.1f,\t%.1f,\t%d,\t%d,\t%s\n",solve_result,gurobi_time,cplex_time,objective,req_hours,twotech_lb_count,twotech_ub_count;
+		printf "%d\t%s\t%f\t%.1f\t%s\t%f\t%.1f\n",n,g_status,gurobi_time,g_sol,c_status,cplex_time,c_sol;
+#		if solve_result != 'solved' then {let infeasible_count:=infeasible_count+1};
+	};
+	#print "  ";
+	update data;
+};
+
+let g_avg := (g_sol_avg+g_inf_avg+g_lim_avg)/n_runs;
+let c_avg := (c_sol_avg+c_inf_avg+c_lim_avg)/n_runs;
+
+if g_sol_count>0 then {let g_sol_avg := g_sol_avg/g_sol_count};
+if g_inf_count>0 then {let g_inf_avg := g_inf_avg/g_inf_count};
+if g_lim_count>0 then {let g_lim_avg := g_lim_avg/g_lim_count};
+
+if c_sol_count>0 then {let c_sol_avg := c_sol_avg/c_sol_count};
+if c_inf_count>0 then {let c_inf_avg := c_inf_avg/c_inf_count};
+if c_lim_count>0 then {let c_lim_avg := c_lim_avg/c_lim_count};
+
+print '';
+
+printf 'session time, %f\n', _session_time;
+printf 'session max time, %f\n', _session_maxtime;
+
+print '';
+
+#printf "%s\t%s\t%s\t%s\n","  ","Count","Gurobi","CPLEX";
+#printf "%s\t%d\t%.4f\t%.4f\n","Solved",sol_count,g_sol_avg,c_sol_avg;
+#printf "%s\t%d\t%.4f\t%.4f\n","Infeas",inf_count,g_inf_avg,c_inf_avg;
+
+printf "%d\t%f\t%d\t%f\t%d\t%f\t%d\t%f\t%d\t%f\t%d\t%f\t%f\t%f\n",g_sol_count,g_sol_avg,c_sol_count,c_sol_avg,g_inf_count,g_inf_avg,c_inf_count,c_inf_avg,g_lim_count,g_lim_avg,c_lim_count,c_lim_avg,g_avg,c_avg;
+#printf "%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\n","filename","jobs","depot","techs","weeks","doms","lvls","runs","g_sol","avg","c_sol","avg","g_inf","avg","c_inf","avg","g_lim","avg","c_lim","avg","g_avg","c_avg" >> /home/rw9g11/VRP/result_log.txt;
+printf "\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%d\t%f\t%d\t%f\t%d\t%f\t%d\t%f\t%d\t%f\t%d\t%f\t%f\t%f",card(JOBS),card(DEPOTS),card(TECHS),card(WEEKS),card(SKL_DOM),card(SKL_LVL),n_runs,g_sol_count,g_sol_avg,c_sol_count,c_sol_avg,g_inf_count,g_inf_avg,c_inf_count,c_inf_avg,g_lim_count,g_lim_avg,c_lim_count,c_lim_avg,g_avg,c_avg >> /home/rw9g11/VRP/result_log.txt;
+
+
+
+
+#close log_file;

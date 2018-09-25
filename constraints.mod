@@ -126,7 +126,7 @@ minimize objective:
 	weight[2]*cost_nights*(sum{(j,k,w,d) in set_FEASIBLE_DAYS: night_away[j,k]=1}var_night_away[j,k,w,d])+
 	weight[3]*cost_late*(sum{j in JOBS}var_late[j])+
 #	weight[3]*cost_late*(sum{j in JOBS}var_late[j]*(var_start[j]+(if duration[j,1]>=0 then (1-var_twotech[j])*duration[j,1])+(if duration[j,2]>=0 then (var_twotech[j]*duration[j,2]))-finish[j]))
-		  	    (sum{(i,j,k,t) in set_ARRIVE}t*var_arrive[i,j,k,t])+
+#		  	    (sum{(i,j,k,t) in set_ARRIVE}t*var_arrive[i,j,k,t])+
 0;
 
 # ------------------------------------------------------------
@@ -230,8 +230,14 @@ subject to c_tw_leave_rz{j in JOBS, t in HOURS}:
 
 
 # ------------------------------------------------------------
+
 subject to c_return_home{k in TECHS,w in WEEKS}:
 	sum{j in JOBS, t in HOURS_W[w]:(base[k],j,k,t) in set_LEAVE}var_leave[base[k],j,k,t]=
+		1;
+
+
+subject to c_return_home_new{k in TECHS}:
+	sum{j in JOBS, t in HOURS:(base[k],j,k,t) in set_LEAVE}var_leave[base[k],j,k,t]=
 		1;
 
 # tech leaving job i at time t will arrive at j at time t+(travel time)

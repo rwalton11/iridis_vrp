@@ -86,6 +86,7 @@ problem testing:
 	c_tech_max,			# var_leave
 	c_tech_inout,			# var_leave
 #	c_return_home,			# var_leave
+	c_return_home_new,		# var_leave
 	c_arcs,				# var_leave, var_arrive
 	c_twotech,			# var_leave, var_twotech
 	c_pair_balance,			# var_twotech, var_tech_pair
@@ -94,7 +95,7 @@ problem testing:
 	c_tw_arrive,			# var_arrive, var_start
 #	c_tw_arrive_r,			# var_arrive, var_start
 #	c_tw_arrive_rz,			# var_arrive, var_start, var_twotech
-#	c_tw_leave,			# var_leave, var_start
+	c_tw_leave,			# var_leave, var_start
 #	c_tw_leave_r,			# var_leave, var_start
 #	c_tw_leave_rz,			# var_leave, var_start, var_twotech
 	c_start_time,			# var_start

@@ -1,4 +1,0 @@
-DATE_TIME=$(date +%Y%m%d-%H%M%S)
- ampl -x 10000 rand_init.mod constraints.mod rand.dat multiple_solve.run | tee  results/multiple_$DATE_TIME.txt
-# ampl -x 10000 rand_init.mod constraints.mod rand.dat multiple_solve.run>results/multiple_$DATE_TIME.txt
-echo $DATE_TIME

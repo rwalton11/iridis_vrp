@@ -1,0 +1,41 @@
+jobs, 8
+depots, 2
+techs, 4
+skill domains, 2
+skill levels, 2
+weeks, 2
+tech hours, 320
+runs, 1
+problem testing: var_leave, var_arrive, var_start, var_twotech,
+  var_night_away, var_hours_tech, var_tech_pair, var_late, objective,
+  c_tech_min, c_tech_max, c_tech_inout, c_return_home_new, c_arcs,
+  c_twotech, c_pair_balance, c_pair_sym, c_pair_ub, c_tw_arrive, c_tw_leave,
+  c_start_time, c_finish_time, c_hours_tech_balance, c_hours_tech_pair_1,
+  c_hours_tech_pair_2, c_job_order, c_day_capacity, c_night_away_lb,
+  c_night_away_ub, c_consec_hours_l, c_list_end;
+Count	Result	Gurobi	CPLEX	Objective
+CPLEX 12.5.0.0: integer infeasible.
+0 MIP simplex iterations
+0 branch-and-bound nodes
+Returning an IIS of 0 variables and 2 constraints.
+No basis.
+
+suffix iis symbolic OUT;
+
+option iis_table '\
+0	non	not in the iis\
+1	low	at lower bound\
+2	fix	fixed\
+3	upp	at upper bound\
+4	mem	member\
+5	pmem	possible member\
+6	plow	possibly at lower bound\
+7	pupp	possibly at upper bound\
+8	bug\
+';
+1	?	0.000000	2.0	infeas	0.174973	2.0
+:              _conname[i]        _con[i].iis    :=
+74      'c_pair_balance[2]'         mem
+25415   'c_consec_hours_l[2,1,3]'   mem
+;
+

@@ -14,9 +14,9 @@ problem testing: var_leave, var_arrive, var_start, var_twotech,
   c_hours_tech_pair_2, c_day_capacity, c_night_away_lb, c_night_away_ub,
   c_consec_hours_l, c_list_end;
 Count	Result	Gurobi	CPLEX	Objective
-1	solved	3.565457	8.0	solved	0.271958	8.0
+1	infeas	0.054991	0.0	infeas	0.055991	0.0
 
-session time, 2.887529
+session time, 0.621498
 session max time, 10000.000000
 
-1	3.565457	1	0.271958	0	0.000000	0	0.000000	0	0.000000	0	0.000000	3.565457	0.271958
+0	0.000000	0	0.000000	1	0.054991	1	0.055991	0	0.000000	0	0.000000	0.054991	0.055991

@@ -117,6 +117,7 @@ var var_tech_pair{j in JOBS, k in TECHS, kp in TECHS:
 var var_late{j in JOBS} binary;
 
 
+
 # ------------------------------------------------------------
 # objective function
 # ------------------------------------------------------------
@@ -127,7 +128,7 @@ minimize objective:
 	weight[3]*cost_late*(sum{j in JOBS}var_late[j])+
 #	weight[3]*cost_late*(sum{j in JOBS}var_late[j]*(var_start[j]+(if duration[j,1]>=0 then (1-var_twotech[j])*duration[j,1])+(if duration[j,2]>=0 then (var_twotech[j]*duration[j,2]))-finish[j]))
 #		  	    (sum{(i,j,k,t) in set_ARRIVE}t*var_arrive[i,j,k,t])+
-#			    (sum{j in JOBS}var_start[j])+
+			    (sum{j in JOBS}var_start[j])+
 0;
 
 # ------------------------------------------------------------
@@ -416,6 +417,7 @@ subject to c_consec_hours_l{j in JOBS, k in TECHS, t in HOURS}:
 #just to make the listing of constraints easier
 subject to c_list_end:
 	1=1;
+
 
 
 printf "%s\n%s\n%s\n%s\n%s", "  ","------------------------------","end of constraints file","-------------------------------","  ">log_file;

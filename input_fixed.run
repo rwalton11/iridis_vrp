@@ -8,8 +8,9 @@
 #param time_lim = 60;
 
 option display_1col 0;
-option solver_msg 0;
+#option solver_msg 0;
 option cplex_options 'time=200';
+option cplex_options 'iisfind 1';
 option gurobi_options 'timelim=200';
 param feasible;
 param n_runs = 1;
@@ -67,6 +68,9 @@ print "  ">log_file;
 
 param tech_hours;
 param req_hours;
+#display var_leave;
+#display var_arrive;
+
 
 problem testing:
 	var_leave,
@@ -86,7 +90,7 @@ problem testing:
 	c_tech_max,			# var_leave
 	c_tech_inout,			# var_leave
 #	c_return_home,			# var_leave
-#	c_return_home_new,		# var_leave
+	c_return_home_new,		# var_leave
 	c_arcs,				# var_leave, var_arrive
 	c_twotech,			# var_leave, var_twotech
 	c_pair_balance,			# var_twotech, var_tech_pair
@@ -120,6 +124,15 @@ problem testing:
 	c_consec_hours_l,		# var_leave, var_hours_tech, var_twotech
 	c_list_end
 ;
+
+#--------------------------------------------------------
+# fixing variable values
+#-------------------------------------------------------
+
+#fix var_start[2] := 3;
+fix var_leave[10,2,1,1] := 1;
+
+#-------------------------------------------------------
 
 let tech_hours := weeks_count*hours_week*card(TECHS);
 printf 'jobs, %d\n', card(JOBS); 
@@ -219,8 +232,8 @@ for {n in 1..n_runs}{
 #			if tech_max[j]=2 then {let twotech_ub_count:=twotech_ub_count+1;};
 #		};
 		
-		option solver gurobi;
-		solve testing > log_file;
+#		option solver gurobi;
+#		solve testing > log_file;
 #		print solve_message #  > log_file;
 		let gurobi_time := _solve_time;
 		let g_status := substr(solve_result,1,6);
@@ -253,8 +266,12 @@ for {n in 1..n_runs}{
 	update data;
 };
 
+display{i in 1.._ncons:_con[i].iis <> "non"} (_conname[i],_con[i].iis);
+
+
 #display travel;
 
+/*
 print ' ';
 print 'var_leave:';
 printf '%2s %2s %2s %3s %s\n', "i","j","k","t","val";
@@ -309,6 +326,8 @@ print 'var_late:';
 printf '%2s %3s\n', "j","val";
 for{j in JOBS}{printf '%2d %3d\n', j,var_late[j].val;};
 print ' ';
+
+*/
 
 
 let g_avg := (g_sol_avg+g_inf_avg+g_lim_avg)/n_runs;

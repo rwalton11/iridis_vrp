@@ -1,0 +1,117 @@
+jobs, 8
+depots, 2
+techs, 4
+skill domains, 2
+skill levels, 2
+weeks, 2
+tech hours, 320
+runs, 1
+problem testing: var_leave, var_arrive, var_start, var_twotech,
+  var_night_away, var_hours_tech, var_tech_pair, var_late, objective,
+  c_tech_min, c_tech_max, c_tech_inout, c_return_home_new, c_arcs,
+  c_twotech, c_pair_balance, c_pair_sym, c_pair_ub, c_tw_arrive, c_tw_leave,
+  c_start_time, c_finish_time, c_hours_tech_balance, c_hours_tech_pair_1,
+  c_hours_tech_pair_2, c_job_order, c_day_capacity, c_night_away_lb,
+  c_night_away_ub, c_consec_hours_l, c_list_end;
+Count	Result	Gurobi	CPLEX	Objective
+1	solved	2.284652	8.0	solved	0.298955	8.0
+ 
+var_leave:
+ i  j  k   t val
+ 1 10  2  76  1
+ 1 10  4  76  1
+ 2  5  3  53  1
+ 3 10  1  79  1
+ 4  2  3  32  1
+ 4  7  2  24  1
+ 5  9  3  67  1
+ 6  1  4  56  1
+ 7  1  2  56  1
+ 8  3  1  56  1
+ 9  4  3   7  1
+10  4  2   7  1
+10  6  4  22  1
+10  8  1   8  1
+ 
+ 
+var_arrive:
+ i  j  k   t val
+ 1 10  2  77  1
+ 1 10  4  77  1
+ 2  5  3  53  1
+ 3 10  1  80  1
+ 4  2  3  32  1
+ 4  7  2  24  1
+ 5  9  3  68  1
+ 6  1  4  56  1
+ 7  1  2  56  1
+ 8  3  1  56  1
+ 9  4  3   8  1
+10  4  2   8  1
+10  6  4  23  1
+10  8  1   9  1
+ 
+ 
+var_start:
+ j val
+ 1  56
+ 2  32
+ 3  56
+ 4   8
+ 5  53
+ 6  23
+ 7  24
+ 8   9
+ 
+ 
+var_twotech:
+ j val
+ 1   1
+ 2   0
+ 3   0
+ 4   1
+ 5   0
+ 6   0
+ 7   0
+ 8   0
+ 
+ 
+var_night_away:
+ j  k  w  d val
+ 
+ 
+var_hours_tech:
+ j  k  w  d val
+ 1  2  2  2  8
+ 1  4  2  2  8
+ 3  1  2  2  6
+ 4  2  1  1  7
+ 4  2  1  2  2
+ 4  3  1  1  7
+ 4  3  1  2  2
+ 5  3  2  2  4
+ 6  4  1  3  2
+ 6  4  1  4  8
+ 8  1  1  2  8
+ 8  1  1  3  8
+ 
+
+var_tech_pair:
+ j  k kp val
+ 1  2  4  1
+ 1  4  2  1
+ 4  2  3  1
+ 4  3  2  1
+
+ 
+var_late:
+ j val
+ 1   0
+ 2   0
+ 3   0
+ 4   0
+ 5   0
+ 6   0
+ 7   0
+ 8   0
+ 

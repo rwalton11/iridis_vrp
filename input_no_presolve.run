@@ -92,6 +92,7 @@ problem testing:
 	c_pair_balance,			# var_twotech, var_tech_pair
 	c_pair_sym,			# var_tech_pair
 	c_pair_ub,			# var_leave, var_tech_pair
+#	c_skills,			# var_leave, var_twotech
 	c_tw_arrive,			# var_arrive, var_start
 #	c_tw_arrive_r,			# var_arrive, var_start
 #	c_tw_arrive_rz,			# var_arrive, var_start, var_twotech
